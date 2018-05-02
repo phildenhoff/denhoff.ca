@@ -1,0 +1,39 @@
+baseURL = "https://denhoff.ca"
+languageCode = "en-us"
+title = "phil denhoff"
+
+theme = "coder"
+
+[params]
+    author = "Phil Denhoff" 
+    info = "Full stack dev & UI guy" 
+    description = "Phil's personal blog & landing page" 
+    keywords = "blog,developer,personal" # site keywords
+    
+# Social links
+[[params.social]]
+    name = "Github"
+    weight = 1
+    url = "https://github.com/phildenhoff/"
+[[params.social]]
+    name = "Twitter"
+    weight = 2
+    url = "https://twitter.com/phildenhoff/"
+[[params.social]]
+    name = "LinkedIn"
+    weight = 3
+    url = "https://www.linkedin.com/in/phildenhoff/"
+
+# Menu links
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
+[[menu.main]]
+    name = "About"
+    weight = 2
+    url = "/about/"
+[[menu.main]]
+    name = "Start"
+    weight = 3
+    url = "/start"
