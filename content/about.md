@@ -1,29 +1,19 @@
 +++
-title = "About Hugo"
+date = "2018-05-04"
+title = "About Phil"
 slug = "about"
 +++
 
-Hugo is a static site engine written in Go.
+Hi! I'm Phil
 
+I'm a Computer Science student at the University of Victoria in British Columbia, Canada.
 
-It makes use of a variety of open source projects including:
+Currently, (as of the date above) I'm working at a radio repeater manufacturer here called [Codan Radio Communications](https://www.codanradio.com), writing scripts and helping manage an on-premise build system and artifact repository.
 
-* [Cobra](https://github.com/spf13/cobra)
-* [Viper](https://github.com/spf13/viper)
-* [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
-* [Cast](https://github.com/spf13/cast)
+I like [building things](https://github.com/phildenhoff) and [watching movies](https://letterboxd.com/OverHonour/films). If you're interested in working with me, [send me an email](mailto:phildenhoff@gmail.com)! I love to hear about new projects, although I can't guarantee I'll be able to work on it.
 
-Learn more and contribute on [GitHub](https://github.com/spf13).
+## About this site
 
-## Setup
-
-Some fun facts about [Hugo](http://gohugo.io/):
-
-* Built in [Go](http://golang.org/)
-* Loosely inspired by [Jekyll](http://jekyllrb.com/)
-* Primarily developed by [spf13](http://spf13.com/) on the train while commuting to and from Manhattan.
-* Coded in [Vim](http://vim.org) using [spf13-vim](http://vim.spf13.com/)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/spf13/hugo/issues/new) or [ask me on Twitter](https://twitter.com/spf13).
+This website was built using [Hugo](https://gohugo.io/), a static site engine written in [Go](http://golang.org/).
 
 Thanks for reading!

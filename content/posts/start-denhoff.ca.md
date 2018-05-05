@@ -1,11 +1,9 @@
 +++
 date = "2018-05-02"
-title = "Getting started with Hugo"
+title = "Starting up denhoff.ca"
 math = "true"
 
 +++
-
-## Style Demo
 
 I've just getting started with Hugo. Hugo's a "static site engine written in Go".
  Effectively, I write markdown, and it makes me a nice fancy website, with the
