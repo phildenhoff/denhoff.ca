@@ -4,7 +4,7 @@ title = "About Phil"
 slug = "about"
 +++
 
-Hi! I'm Phil
+Hmm… what else were you hoping to know?
 
 I'm a Computer Science student at the University of Victoria in British Columbia, Canada.
 

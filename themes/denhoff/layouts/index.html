@@ -1,0 +1,14 @@
+{{ define "main" -}}
+<div class="posts">
+  {{ partial "content-header" . }}
+  <div class="central-column">
+    {{ .Content }}
+    <div class="social-icons">
+      <img alt="{{ .Params.social.one.alt }}" src="{{ .Params.social.one.img }}">
+      <img alt="{{ .Params.social.two.alt }}" src="{{ .Params.social.two.img }}">
+      <img alt="{{ .Params.social.three.alt }}" src="{{ .Params.social.three.img }}">
+      {{ .Params.recommendedby }}
+    </div>
+  </div>
+</div>
+{{- end }}

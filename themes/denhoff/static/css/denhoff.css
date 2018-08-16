@@ -1,0 +1,123 @@
+body {
+    font-family: Rasa;
+    font-size: 16px;
+}
+
+p {
+    font-size: 1em;
+    color: #484848;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.central-column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30vw;
+    margin-left: 35vw;
+}
+
+.central-column>p {
+    text-align: left;
+    width: 100%;
+}
+
+h1.site-hero {
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    font-size: 4em;
+    line-height: 0.7em;
+    margin-top: 2vh;
+    cursor: default;
+}
+
+.home-header {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home-header > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+
+.home-header > ul > li > a {
+    list-style: none;
+    font-size: 1.6em;
+    font-family: 'Playfair Display';
+    line-height: 1.1em;
+    font-weight: 600;
+    color: #535353;
+    text-align: right;
+}
+
+.home-header > ul > li > a:hover {
+    color: #777575;
+    cursor: default;
+}
+
+img.inline-image {
+    height: 1.8em;
+    vertical-align: top;
+    top: -0.4em;
+    position: relative;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.social-icons > img {
+    width: 30px;
+    height: 30px;
+}
+
+mark {
+    background-color: inherit;
+    color: inherit;
+}
+
+mark.highlight--yellow {
+    background: -webkit-linear-gradient(top, transparent 0%, transparent 50%, #F2EA22 50%, #F2EA22 100%);
+}
+
+mark.highlight--blue {
+    background: -webkit-linear-gradient(top, transparent 0%, transparent 50%, #d0f6ff 50%, #d0f6ff 100%);
+}
+
+footer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom:0;
+    width: 30vw;
+    margin-left: 35vw;
+    height:44px;   /* Height of the footer */
+    color: #C7C7C7;
+    font-size: 1em;
+    text-align: center;
+}

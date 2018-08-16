@@ -2,22 +2,26 @@ baseURL = "https://denhoff.ca/"
 languageCode = "en-us"
 title = "Phil Denhoff"
 
-theme = "hyde"
+theme = "denhoff"
+relativeURLs = true
 
 [params]
     description = "A personal blog & landing page" 
     keywords = "blog,developer,personal" # site keywords
     themeColor = "theme-base-0c"
-    
+    footerText = "Made by yours truly, in 2018, in Victoria, BC."
+    firstName = "Phil"
+    lastName = "Denhoff"
+
 # Menu links
 [[menu.main]]
-    name = "Blog"
+    name = "About Me"
     weight = 1
-    url  = "/posts/"
-[[menu.main]]
-    name = "About"
-    weight = 2
     url = "/about/"
+[[menu.main]]
+    name = "Projects"
+    weight = 2
+    url = "/projects/"
 [[menu.main]]
     name = "Start"
     weight = 3

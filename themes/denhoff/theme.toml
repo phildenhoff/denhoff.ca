@@ -1,0 +1,11 @@
+name = "denhoff"
+license = "MIT"
+description = "A design made just for me"
+homepage = "https://denhoff.ca"
+tags = ["blog", "company"]
+features = []
+min_version = "0.36.1"
+
+[author]
+  name = "Phil Denhoff"
+  homepage = "https://denhoff.ca"
