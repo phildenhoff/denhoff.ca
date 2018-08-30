@@ -4,6 +4,7 @@
     {{ block "main" . -}}{{- end }}
     </div>
 
+    {{ template "_internal/google_analytics_async.html" . }}
     {{ partial "footer.html" . }}
   </body>
 </html>

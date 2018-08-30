@@ -1,12 +1,11 @@
 {{ define "main" -}}
 {{ partial "content-header" . }}
-<div class="post">
-  <h1>{{ .Title }}</h1>
+<div class="post central-column">
+  {{ .Params.pagedesc }}
+  <aside>
+  {{ .TableOfContents }}
+  </aside>
   {{ .Content }}
 </div>
 
-{{ if .Site.DisqusShortname -}}
-<h2>Comments</h2>
-{{ template "_internal/disqus.html" . }}
-{{- end }}
 {{- end }}
