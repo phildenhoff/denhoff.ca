@@ -18,7 +18,7 @@ I’m a third-year computer science student @ [UVic](https://uvic.ca).
 Mostly, I work with 
 <mark class="highlight--yellow">[Javascript](/projects/#start-page)</mark>
 and 
-<mark class="highlight--blue">[Python](/projects/#pluton)</mark>, but I very much like user interface design.
+<mark class="highlight--blue">[Python](/projects/#hirethissnake)</mark>, but I very much like user interface design.
 
 Right now, I’m creating radios at [Codan Radio Communications](https://www.codanradio.com) in Victoria, BC.
 
