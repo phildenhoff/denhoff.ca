@@ -39,10 +39,10 @@ a.nostyle:hover {
 
 .central-column {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
-    width: 60vw;
-    margin-left: 20vw;
+    width: 80vw;
+    margin-left: 10vw;
 }
 
 .central-column>p {
@@ -77,8 +77,6 @@ h1.site-hero {
     align-items: flex-end;
 }
 
-
-
 .home-header > ul > li > a {
     list-style: none;
     font-size: 1.6em;
@@ -102,6 +100,8 @@ img.inline-image {
 }
 
 .social-icons {
+    margin-top: 1em;
+    align-self: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -182,24 +182,13 @@ aside {
     width: inherit;
 }
 
-pre {
-    margin: 2em;
+figure img {
+    max-width: 75%;
+    margin-left: 2em;
 }
 
-code {
-    background-color: #505050;
-    padding: 2px 4px 2px 4px;
-    color: #F48B8B;
-}
-
-p code {
-    font-size: 0.8em;
-}
-
-pre code {
-    padding: 20px;
-    margin-bottom: 1em;
-    margin-top: 80px;
+.highlight pre {
+    padding: 1em;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.1);
 }
 

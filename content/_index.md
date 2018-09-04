@@ -25,4 +25,6 @@ Right now, I’m creating radios at [Codan Radio Communications](https://www.cod
 In my spare time, I also sometimes build apps under 
 <span style="white-space:nowrap">the branding of [<img class="inline-image" src="/img/baseflow-logo@2x.png" alt="Baseflow">](https://baseflow.ca)</span>
 
+Check out my [projects](/projects)!
+
 If you’ve got something you think I’d be interested in,  don’t hesitate to reach out:
