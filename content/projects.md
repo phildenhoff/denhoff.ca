@@ -42,15 +42,22 @@ _Check out the [GitHub repository](https://github.com/phildenhoff/choretracker)!
 
 My roommates and I weren't doing all the chores we were supposed to, so I started looking 
 into game-ifying it: "choretracker" is what came out of that! **The idea is to encourage
-chore-doing by giving people points when they claim to have done a chore**.
+chore-doing by giving people gold stars when they claim to have done a chore**.
+
+{{< figure src="../img/projects/choretracker/homepage_v1.png" 
+caption="The homepage for a signed-in user Phil. Note the two obvious actions: claim or confirm. Users can also logout with the red bar at the bottom, which raises up on  mouse hover. You can see the current roommates for the system in the top bar." 
+alt="choretracker home page shows two large buttons: 'claim' and 'confirm'. It also shows a leaderboard of the current roommates' scores in a top bar." >}}
 
 To prevent cheating the system, other roommates have to confirm the chore was done. At that point,
 golden stars are locked-in and the claiming user can't lose their points. **However**, if
 verifier knows that the **claimer didn't do the chore, then the claimer loses their 
 points**. There is also a 1-person leaderboard set up, so you can see who is at the top.
 
-I started a
-rewrite of this project in Vue.js (I called it 
+{{< figure src="../img/projects/choretracker/confirm_v1.png" 
+caption="The confirm page for another user, Karl. He would either confirm the user Phil did the action, or confirm he did not. If not, Phil's points would be subtracted from his current running total." 
+alt="The confirm page prompts the user 'Did Phil let it go?' with two large buttons: 'yes' or 'no'" >}}
+
+I started a rewrite of this project in Vue.js (I called it 
 [pluton](https://github.com/phildenhoff/pluton-web)) but I stopped nearly as soon as I
 started. The major issue I had with pluton was the same reason I stopped working on
 choretracker originally - I had no reason to keep working on it. Not long after I started

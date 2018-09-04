@@ -183,8 +183,18 @@ aside {
 }
 
 figure img {
-    max-width: 75%;
-    margin-left: 2em;
+    width: 75%;
+    align-self: center;
+}
+
+figure {
+    display: flex;
+    flex-direction: column
+}
+
+figcaption p {
+    font-size: 0.9em;
+    color: #747474;
 }
 
 .highlight pre {
