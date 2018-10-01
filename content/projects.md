@@ -5,6 +5,38 @@ slug = "projects"
 pagedesc = "Great question! I’ve started a lot of projects, but I’m most proud of the few here."
 +++
 
+# chortle
+
+_Check out chortle at [chortle.app](https://chortle.app)_
+
+Chortle is a chore tracking app for roommates. The idea is that by gamifying doing chores,
+and using roommate-defined rewards in the household, each roommate will be encouraged to
+compete with each other to get the rewards.
+
+Now, of course, the motivation of each roommate will be different and the rewards will
+likekly have to be tangible and decently worth while. I'm interested in doing some research
+into "sensible default" rewards based on game theory and individuals average self-worth of
+their time, but at this point it's mostly undefined.
+
+I've started the first MVP of this app using Vue (as per usual). Most of the basic
+components are done both design-wise and in implementation as HTML/CSS, however the front-
+end still requires the API connection to fill with real data. You can see the API
+definition [here on swagger.io](https://app.swaggerhub.com/apis-docs/baseflow/chortle/1.0.0).
+
+The backend also has not be finished. It's implemented in Python using Flask. At some point
+in the future, if this project takes off (or is otherwise interesting) I'd like to replace
+Python with a more performant language like Rust or Go -- to practice my skills and try
+something new.
+
+However, at this point chortle is mostly a landing page, an API doc, and some designs in
+an XD file on my laptop.
+
+You can subscribe to the chortle Release Updates mailing list
+[here](https://chortle.app/signup/)!
+
+_Last updated September 30, 2018._ [↑](#)
+
+
 # start-page 
 _Check out the [GitHub repository](https://github.com/phildenhoff/start-page)! Live demo [here](/start)._
 
