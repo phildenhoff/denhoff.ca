@@ -6,7 +6,7 @@
 [social.two]
     img = "/img/email@2x.png"
     alt = "Email Icon"
-    url = "mailto:phildenhoff@gmail.com"
+    url = "mailto:phildenhoff+denhoffca@gmail.com"
 [social.three]
     img = "/img/twitter@2x.png"
     alt = "Twitter Icon"

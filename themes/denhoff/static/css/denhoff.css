@@ -1,6 +1,6 @@
 body {
-    font-family: Rasa;
-    font-size: 16px;
+    font-family: Rasa, serif;
+    font-size: 18px;
 }
 
 p {
@@ -213,14 +213,14 @@ figcaption p {
         width: 40vw;
         margin-left: 30vw;
     }
-    
+
     footer {
         width: 30vw;
         margin-left: 35vw;
     }
 
     h1.site-hero {
-        font-size: 4em;
+        font-size: 3em;
     }
 
     .home-header {

@@ -2,40 +2,58 @@
 date = "2018-05-04"
 title = "About Phil"
 slug = "about"
-pagedesc = "Hmm... what else were you hoping to know?"
+pagedesc = """Currently a computer science student at UVic, I'm interested
+in improving the interactions we have with the built world."""
 +++
 
-# skills 
-I’ve got a wide-range of skills; wide enough that I can't list them all! But here are
-a selection:
+# skills
 
- - Javascript
- - Python
- - Vue.js / React
- - Microsoft Office Suite
- - AWS & GCP
- - Digital Ocean 
+As a UX designer, I create prototypes, workshop wireframes, user test, gain
+feedback from stakeholders, and try to build the best experience I can. Most of
+my work is done as a UX-team-of-one, but I always enjoy working with folks who
+see things a little different than I do; that challenges our beliefs and builds
+a better product!
 
-# employment 
-<span class='employer'>Codan Radio Communications</span>
-
-_April 2018 - December 2018_
-
-- Built a secure, root-level API for user space applications to make privileged requests 
-such as
-    - network configuration (IP address, NTP servers, gateway)
-    - reboot
-    - system upgrades
-- Assisted in building install & upgrade scripts for a software-defined radio repeater
-- Researched converting a local build system to become cloud-based, submitted
-technical briefs to IT department regarding this research
-- Led DevOps team as Scrum Master
-- Designed second pass at the Cascade web GUI interface, including a focus on improving
-salability of the design, improving user experience, and preparing design for future
-features.
+I'm skilled in wireframing, prototyping, Adobe XD, and Adobe Illustrator. I
+also have a solid grasp of programming topics and can work one-on-one with
+developers to make our UX the best.
 
 
-<span class='employer'>Better Print Victoria</span>
+Like I said, I try to be a jack-of-all trades. So, I've also got experience with
+the following technologies:
+
+- Python, Go, Groovy, Javascript
+- Vue.js
+- Flask and Node.js
+- AWS and GCP
+- Chef.io
+- Administration of Azure DevOps (previously VSTS), GoCD, Nexus, and Gitlab 
+ 
+Now that I think about if, I have experience with about two of most things. I
+tend to try something and then test out its alternatives to see how
+they compare...
+
+# employment history
+<span class='employer'>Codan Radio Communications | UX Designer & DevOps Engineer</span>
+
+_April 2018 - ongoing_
+
+As UX Designer, I am responsible for redesigning Cascade's software interface.
+I keep in touch with a number of stakeholders (product owner, software team,
+marketing) to make sure all current requirements are satisfied, future
+requirements are satisfiable, that the software is easy to write and maintain,
+and that Cascade follows our existing brand guidelines. All while keeping the
+experience for the people using our product enjoyable.
+
+In my role as DevOps Engineer, I was also responsible for assisting and
+de-risking a migration from GoCD, Nexus, and GitLab to Azure DevOps (previously
+VSTS). I also worked to keep the four-man team's sprint in focus in my role as
+scrum master. As a team, we built and maintained build agents using Chef.io,
+migrated projects from Mercurial and hap-hazard builds to automated builds from
+Git repositories, and began documenting an automated test framework for our
+all teams in our division.
+
+<span class='employer'>Better Print Victoria | Customer service representative</span>
 
 _May 2017 - December 2017_
 
@@ -47,7 +65,7 @@ communication with customers and fellow staff members
 - Performed GSuite and Google My Business setups for customers
 
 
-<span class='employer'>Reelgood Inc.</span>
+<span class='employer'>Reelgood Inc. | Junior software engineer</span>
 
 _September 2016 - February 2017_
 

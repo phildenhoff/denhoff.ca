@@ -2,7 +2,7 @@
 date = "2018-05-04"
 title = "Projects"
 slug = "projects"
-pagedesc = "Great question! I’ve started a lot of projects, but I’m most proud of the few here."
+pagedesc = "I’ve started a lot of projects, but I’m most proud of the few here."
 +++
 
 # chortle
@@ -14,7 +14,7 @@ and using roommate-defined rewards in the household, each roommate will be encou
 compete with each other to get the rewards.
 
 Now, of course, the motivation of each roommate will be different and the rewards will
-likekly have to be tangible and decently worth while. I'm interested in doing some research
+likely have to be tangible and decently worth while. I'm interested in doing some research
 into "sensible default" rewards based on game theory and individuals average self-worth of
 their time, but at this point it's mostly undefined.
 
@@ -23,10 +23,10 @@ components are done both design-wise and in implementation as HTML/CSS, however 
 end still requires the API connection to fill with real data. You can see the API
 definition [here on swagger.io](https://app.swaggerhub.com/apis-docs/baseflow/chortle/1.0.0).
 
-The backend also has not be finished. It's implemented in Python using Flask. At some point
-in the future, if this project takes off (or is otherwise interesting) I'd like to replace
-Python with a more performant language like Rust or Go -- to practice my skills and try
-something new.
+The backend also has not be finished. It's been implemented up to this point in
+Python using Flask. At some point in the future, if this project takes off (or
+is otherwise interesting) I'd like to replace Python with a more performant
+language like Rust or Go -- to practice my skills and try something new.
 
 However, at this point chortle is mostly a landing page, an API doc, and some designs in
 an XD file on my laptop.
