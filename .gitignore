@@ -1,5 +1,6 @@
 public/
-themes/
 .DS_Store
 */.DS_Store
 .firebase/
+package-lock.json
+node_modules

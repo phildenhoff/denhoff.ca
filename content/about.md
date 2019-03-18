@@ -71,6 +71,28 @@ _September 2016 - February 2017_
 
 - Used React, Redux, PhantomJS, CSS and HTML for web development, as well as performing miscellaneous tasks for up-and-coming streaming service aggregator.
 
+# auth & id
+
+Below are my public SSH keys and GPG keys. If you'd like to send me encrypted
+emails, please give me a heads-up.
+
+**GPG**
+
+
+
+**SSH**
+
+phil@maitai:
+
+<span class='id-key'> `ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDnbHOwobW2Ux15JnyW97HBk6tE0LEu2tiV8b+/QsAM5Gwhzyaz0QeWq//6lUdunrFfkbD0xgplbaSeFXwh3q0UY3B8EJDgu8eig9KeG+PWc0iUty6lLtU1zXltxNg52IQorC5aExJ17upFWXqG4rKilNR1OWwp+SA2oOuSCyfVx5QIOVgRLTLK7stTq0jbsWZrlyVM2ZPqJ0DI0io3YaJocl8BPMLJpLTlNJaP8RvSYDWaZRcBkIySW2L+5zEYSUvLTfkxjj81LgMS/P6A50AaZoUVvXNMrkD5CCVB1lCnsja5KyPAxGGvaEyPJVzXYAO05DMIOYGMuMzZE6aEGl9N phil@maitai` </span>
+
+phil@manhattan:
+
+<span class='id-key'> `ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDBDUxpDMq9BGdC32iuMmHcwrKZdj9f9bjp7kjZe3Ws3qLqj8Wk+glBo0FS+atuuDGjGV8OpK14GztqilfV5adjy3nqaLAiivudiyg+N2YKPw5D1fs4wwcz4xTAaGpQ4vDOx9e/DjnDpBARVtKUSlGqjYV92G0Pa+pFA33ZpW1DLlfIp/12RXerSlpS8flanGrMOMQaKXMnDzfuaXXszw4UL/V7EGqYrQjOe9jB+h7UpFKZF5NxqchxcE8dS57y6HdRJBglZ/d+VmqFCNC5R7ekypW8fkABKqTQYOET5jXoh96BIuRdtBrw4bISJhdahtuaoCPJ/JYO82YTKIopocB phil@manhattan` </span>
+
+phil@casino:
+
+<span class='id-key'> `ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDf7SR90loVfvDt3EvRXqHw16rx52dO7xcI7PjgKQeJNes63t2aBSdJpEZk0ciKfnLjFZuwQr22oDFA4Vd0x0KrDFvZY5+4Y3kngy0uXmtpqFhvgX8/svcbIWUu92H1xYT50Q4qbEWKX2kjTbSMpaEdIJDgHhGCexVbc91dCAKHc9bhDM+yqKava8WvcqapZXTAw+p8gLihpPrb22whjE9CsX55L5pd/T6rm9rnZOyIj1CbWHvdEM2qPOykKZQw3IHs5Z8t7Hd5jVj9ljo+R7Mquu1HM7R8zFwSJaJ8z+7pkLHuD36D8AHOqnAcEiZja9uQwGqQ8hrIt/83CTWBFfqd phil@casino` </span>
 
 # other
 More text coming here soon. Stay tuned!

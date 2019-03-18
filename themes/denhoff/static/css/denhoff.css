@@ -35,6 +35,10 @@ a.nostyle:hover {
     opacity: 1;
 }
 
+.id-key {
+    word-wrap: break-word;
+}
+
 /* Mobile */
 
 .central-column {
