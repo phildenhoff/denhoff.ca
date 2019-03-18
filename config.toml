@@ -10,7 +10,7 @@ googleAnalytics = "UA-91669436-1"
     description = "A personal blog & landing page" 
     keywords = "blog,developer,personal" # site keywords
     themeColor = "theme-base-0c"
-    footerText = "Made by yours truly, in 2018, in Victoria, BC."
+    footerText = "Made in Victoria, BC. 🥑" 
     firstName = "Phil"
     lastName = "Denhoff"
 
