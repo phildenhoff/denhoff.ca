@@ -5,37 +5,36 @@ slug = "projects"
 pagedesc = "I’ve started a lot of projects, but I’m most proud of the few here."
 +++
 
-# chortle
+# shorturl & domainator-nim
 
-_Check out chortle at [chortle.app](https://chortle.app)_
+Inspired by some Hacker News article about Nim, I decided to test out the
+language. I first rewrote my existing
+[domainator](https://github.com/phildenhoff/domainator) project (Python) in
+Nim as [domainator-nim](https://github.com/phildenhoff/domainator-nim), and
+then I re-wrote someone elses "Nimdays" program in a way I think makes some
+improvements.
 
-Chortle is a chore tracking app for roommates. The idea is that by gamifying doing chores,
-and using roommate-defined rewards in the household, each roommate will be encouraged to
-compete with each other to get the rewards.
+The idea behind domainator is simple: you provide some string and it tries to
+generate a valid URL that you could register containing that string.
 
-Now, of course, the motivation of each roommate will be different and the rewards will
-likely have to be tangible and decently worth while. I'm interested in doing some research
-into "sensible default" rewards based on game theory and individuals average self-worth of
-their time, but at this point it's mostly undefined.
+For example, if you wanted to sell a product called "Chuckles", you might
+know off the top of your head that "chuckl.es" is a valid domain, and that
+someone most definitely already registered it. However, you could *instead*
+register "chu.ck" and setup the `/les` subdomain, giving you "chu.ck/les" as
+the website. domainator generates a number of these domains for you. I've
+never, personally, used it. It's a silly idea.
 
-I've started the first MVP of this app using Vue (as per usual). Most of the basic
-components are done both design-wise and in implementation as HTML/CSS, however the front-
-end still requires the API connection to fill with real data. You can see the API
-definition [here on swagger.io](https://app.swaggerhub.com/apis-docs/baseflow/chortle/1.0.0).
+shorturl is like any other domain-shortening service, except it was almost
+exclusively written to try out Nim and therefore has a really dumb fatal flaw
+which I will never fix: all of the short URLs are stored in memory and are
+lost as soon as you kill the process. It was also a trial in reading someone
+elses code and trying to improve it, which I think that I did successfully.
 
-The backend also has not be finished. It's been implemented up to this point in
-Python using Flask. At some point in the future, if this project takes off (or
-is otherwise interesting) I'd like to replace Python with a more performant
-language like Rust or Go -- to practice my skills and try something new.
+Read more about [shorturl](https://github.com/phildenhoff/shorturl) and
+[domainator-nim](https://github.com/phildenhoff/domainator-nim) at their
+respective GitHub repos.
 
-However, at this point chortle is mostly a landing page, an API doc, and some designs in
-an XD file on my laptop.
-
-You can subscribe to the chortle Release Updates mailing list
-[here](https://chortle.app/signup/)!
-
-_Last updated September 30, 2018._ [↑](#)
-
+_Last updated September 14, 2019._ [↑](#)
 
 # start-page 
 _Check out the [GitHub repository](https://github.com/phildenhoff/start-page)! Live demo [here](/start)._
