@@ -1,11 +1,6 @@
 {
   "hosting": {
     "public": "public",
-    "redirects": [ {
-      "source": "chortle.denhoff.ca/**",
-      "destination": "/chortle/**",
-      "type": 301
-    } ],
     "ignore": [
       "firebase.json",
       "**/node_modules/**"

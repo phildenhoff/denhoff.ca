@@ -7,10 +7,10 @@ relativeURLs = true
 googleAnalytics = "UA-91669436-1"
 
 [params]
-    description = "A personal blog & landing page" 
+    description = "A personal blog & landing page"
     keywords = "blog,developer,personal" # site keywords
     themeColor = "theme-base-0c"
-    footerText = "Made in Victoria, BC. 🥑" 
+    footerText = "Made in Victoria, BC. 🥑"
     firstName = "Phil"
     lastName = "Denhoff"
 
@@ -27,3 +27,6 @@ googleAnalytics = "UA-91669436-1"
     name = "Start"
     weight = 3
     url = "/start"
+
+[markup.goldmark.renderer]
+unsafe= true

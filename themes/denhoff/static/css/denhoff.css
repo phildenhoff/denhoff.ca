@@ -107,7 +107,7 @@ img.inline-image {
     margin-top: 1em;
     align-self: center;
     display: grid;
-    grid-column-gap: 50px; 
+    grid-column-gap: 50px;
 }
 
 .social-icons > a > img {
@@ -201,7 +201,7 @@ figcaption p {
 }
 
 .profile-photo img {
-    width: inherit;
+    width: 100%;
     clip-path: circle(50% at center);
 }
 span.profile-photo {
