@@ -16,4 +16,21 @@ First,
 ### Building
 - run `hugo`
 - Copy the contents of  `start-page/dist` into `public/start`
+- make a new file in `public/.well-known/matrix/server` with the content
+  - ```json
+    {
+        "m.server": "matrix.denhoff.ca:8448"
+    }
+    ```
+- make a new file in `public/.well-known/matrix/client` with content:
+    ```json
+    {
+        "m.homeserver": {
+            "base_url": "https://matrix.denhoff.ca"
+        },
+        "m.identity_server": {
+            "base_url": "https://matrix.denhoff.ca"
+        }
+    }
+    ```
 - run `firebase deploy`

@@ -9,6 +9,20 @@
     "ignore": [
       "firebase.json",
       "**/node_modules/**"
-    ]
+    ],
+    "headers": [ {
+        "source": ".well-known/matrix/client",
+        "headers": [ {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+        } ]
+    },
+    {
+        "source": ".well-known/matrix/client|.well-known/matrix/server",
+        "headers": [ {
+            "key": "Content-Type",
+            "value": "application/json"
+        } ]
+     } ]
   }
 }
