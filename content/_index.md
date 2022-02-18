@@ -2,20 +2,19 @@
 [social.one]
     img = "/img/email@2x.png"
     alt = "Email Icon"
-    url = "mailto:phildenhoff+denhoffca@gmail.com"
+    url = "mailto:hello@denhoff.ca"
 +++
 <span class="profile-photo">
-   <img src="./img/phildenhoff-headshot.jpg" alt="Photo of me. Hi!" title="That's me!">
+   <img src="./img/phildenhoff-headshot.jpg" alt="Photo of me. Hi!" width=""L height="">
 </span>
 
-Hi! I’m Phil. I help people spend less time struggling with technology and
-spend more time focused on what is important to them.
+Hi, I'm Phil, a fullstack software developer at [GoFetch](https://gofetch.ca).
+We're helping pets live longer, healthier lives by increasing the amount of preventative care they receive.
+And [we're hiring](mailto:phil@gofetch.ca?subject=I'm%20looking%20to%20help%20pets%20live%20healthier%20lives)!
 
-I've written a number of hobby side projects, mostly in
-<mark class="highlight--yellow">[Javascript](/projects/#start-page)</mark>
-and
-<mark class="highlight--blue">[Python](/projects/#hirethissnake)</mark>, but
-I've also worked with Rust, Nim, Scala, and Adobe XD.
+In working across the stack, I tend to focus on improving build infrastructure, updating tooling, refactoring out technical debt, and planning new features.
+
+While at work we tend to use [Elixir](https://elixir-lang.org/), [React Native](https://reactnative.dev/), and [TypeScript](https://www.typescriptlang.org/), I've worked on a number of projects in other languages — including Python, Nim, and Scala.
 
 For more about what I've done, check out my [projects](/projects)!
 
