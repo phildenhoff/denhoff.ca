@@ -2,7 +2,8 @@
 date = "2018-05-04"
 title = "Projects"
 slug = "projects"
-pagedesc = "I’ve started a lot of projects, but I’m most proud of the few here."
+pagedesc = "I’ve started lots of projects, and I’m proud of the ones here."
+summary = "Some projects I've worked on."
 +++
 
 # shorturl & domainator-nim
@@ -36,7 +37,7 @@ respective GitHub repos.
 
 _Last updated September 14, 2019._ [↑](#)
 
-# start-page 
+# start-page
 _Check out the [GitHub repository](https://github.com/phildenhoff/start-page)! Live demo [here](/start)._
 
 I usually only use the same few websites day-to-day. The idea behind start-page was that it would be a website built to get me from a browser I had just opened to the website I wanted to go to faster. **“Get there faster.”**
@@ -53,7 +54,7 @@ There is an **easily extended list of commands** and their shortcuts: things lik
 caption="The landing page for start-page; text is entered above the orange line (where it says 'help')."
 alt="A screenshot of the landing page; a text-only clock hovers above a text-entry field with the placeholder 'help'." >}}
 
-My favourite facet of this design was that you’d be able to categorise commands “under the hood” as **search** commands, **browser** commands, and **remote** commands. Then, depending on the type of command, the underlying behaviour would be different. It makes **writing commands incredibly powerful and easy**; if you want to add support for searching any website, it’s about five lines of JSON syntax, and you’re in. 
+My favourite facet of this design was that you’d be able to categorise commands “under the hood” as **search** commands, **browser** commands, and **remote** commands. Then, depending on the type of command, the underlying behaviour would be different. It makes **writing commands incredibly powerful and easy**; if you want to add support for searching any website, it’s about five lines of JSON syntax, and you’re in.
 
 However, if you want to add a game of snake when the user types in `snake;` then you can easily do that too: write your base game in a file, add the main loop into the browser.js file as a hidden function, and import your new file. Add an export to browser.js for your new command with help text and you’re good to go!
 
@@ -61,7 +62,7 @@ However, if you want to add a game of snake when the user types in `snake;` then
 caption="The help menu overlay; displayed when you press 'Esc', it lists all available commands."
 alt="A text overlay displays all the commands, their titles, and their descriptions." >}}
 
-One of the features I was excited to work on but **never came to fruition** was **remote commands**; imagine being able to run defined commands like we’ve talked about, except they **run programs through the browser on a personal server**. For example, **you could start or stop services** (specific or arbitrary) services, **run certain programs, collect log information,** reboot it, etc., all **without SSH**. Of course, each of these commands would require definition within start-page, but I expect that to be relatively easy. This never worked out because I found running the website on a Node.JS server excessive. After all, the majority of the app is client-side Vue; there isn’t a huge benefit to adding a live server on the backend. I could have made an API, but I just never found the interest once I started to focus on making it all client-side. 
+One of the features I was excited to work on but **never came to fruition** was **remote commands**; imagine being able to run defined commands like we’ve talked about, except they **run programs through the browser on a personal server**. For example, **you could start or stop services** (specific or arbitrary) services, **run certain programs, collect log information,** reboot it, etc., all **without SSH**. Of course, each of these commands would require definition within start-page, but I expect that to be relatively easy. This never worked out because I found running the website on a Node.JS server excessive. After all, the majority of the app is client-side Vue; there isn’t a huge benefit to adding a live server on the backend. I could have made an API, but I just never found the interest once I started to focus on making it all client-side.
 
 In the end, I don’t use start-page much, but I do like the idea of what I started here. Perhaps I’ll come back to this project again in the future.
 
@@ -71,24 +72,24 @@ _Last updated September 3, 2018._ [↑](#)
 # choretracker
 _Check out the [GitHub repository](https://github.com/phildenhoff/choretracker)!_
 
-My roommates and I weren't doing all the chores we were supposed to, so I started looking 
+My roommates and I weren't doing all the chores we were supposed to, so I started looking
 into game-ifying it: "choretracker" is what came out of that! **The idea is to encourage
 chore-doing by giving people gold stars when they claim to have done a chore**.
 
-{{< figure src="../img/projects/choretracker/homepage_v1.png" 
-caption="The homepage for a signed-in user Phil. Note the two obvious actions: claim or confirm. Users can also logout with the red bar at the bottom, which raises up on  mouse hover. You can see the current roommates for the system in the top bar." 
+{{< figure src="../img/projects/choretracker/homepage_v1.png"
+caption="The homepage for a signed-in user Phil. Note the two obvious actions: claim or confirm. Users can also logout with the red bar at the bottom, which raises up on  mouse hover. You can see the current roommates for the system in the top bar."
 alt="choretracker home page shows two large buttons: 'claim' and 'confirm'. It also shows a leaderboard of the current roommates' scores in a top bar." >}}
 
 To prevent cheating the system, other roommates have to confirm the chore was done. At that point,
 golden stars are locked-in and the claiming user can't lose their points. **However**, if
-verifier knows that the **claimer didn't do the chore, then the claimer loses their 
+verifier knows that the **claimer didn't do the chore, then the claimer loses their
 points**. There is also a 1-person leaderboard set up, so you can see who is at the top.
 
-{{< figure src="../img/projects/choretracker/confirm_v1.png" 
-caption="The confirm page for another user, Karl. He would either confirm the user Phil did the action, or confirm he did not. If not, Phil's points would be subtracted from his current running total." 
+{{< figure src="../img/projects/choretracker/confirm_v1.png"
+caption="The confirm page for another user, Karl. He would either confirm the user Phil did the action, or confirm he did not. If not, Phil's points would be subtracted from his current running total."
 alt="The confirm page prompts the user 'Did Phil let it go?' with two large buttons: 'yes' or 'no'" >}}
 
-I started a rewrite of this project in Vue.js (I called it 
+I started a rewrite of this project in Vue.js (I called it
 [pluton](https://github.com/phildenhoff/pluton-web)) but I stopped nearly as soon as I
 started. The major issue I had with pluton was the same reason I stopped working on
 choretracker originally - I had no reason to keep working on it. Not long after I started
@@ -109,15 +110,15 @@ _Last updated September 3, 2018._ [↑](#)
 # hirethissnake
 
 In 2017, I participated in the [Battlesnake](https://www.battlesnake.io/) competition
-alongside  [Daniel Frankcom](https://www.linkedin.com/in/daniel-frankcom-28a30a82/), 
+alongside  [Daniel Frankcom](https://www.linkedin.com/in/daniel-frankcom-28a30a82/),
 [Eric Showers](http://eric-showers.me/), Kyle Thorpe, and Alex Welsh-Piedrahita. We
 originally built a snake called "[sneakysnake](https://github.com/hirethissnake/2017)". In 2018,
-four of us continued the project again, refining our snake and improving performance 
-(Alex decided to not participate). At this point, we renamed our project to 
+four of us continued the project again, refining our snake and improving performance
+(Alex decided to not participate). At this point, we renamed our project to
 "[hirethissnake](https://github.com/hirethissnake/2018)".
 
-Built in Python, **hirethissnake focused on weighing individual squares on the game board in 
-such a manner that we could use Djikstra's algorithm to maximise "good" squares**. The 
+Built in Python, **hirethissnake focused on weighing individual squares on the game board in
+such a manner that we could use Djikstra's algorithm to maximise "good" squares**. The
 Battlesnake API returned to us a list of snakes, their coordinates, all the food items on
 the board and their coordinates, and a list of (currently) dead snakes. We used this data
 to weigh food squares as "good", snake bodies as "infinitely bad" (there is never a time

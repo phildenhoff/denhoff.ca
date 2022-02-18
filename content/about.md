@@ -4,6 +4,7 @@ title = "About Phil"
 slug = "about"
 pagedesc = """Currently a computer science student at UVic, I'm interested
 in improving the interactions we have with the built world."""
+summary = "Phil is a fullstack software developer, interested in improving the interactions we have with the build world."
 +++
 
 # skills
@@ -27,8 +28,8 @@ the following technologies:
 - Flask (Python) and Node.js (Javascript)
 - Amazon Web Services and Google Cloud Platform
 - Chef.io and Ansible
-- Administration of Azure DevOps (previously VSTS), GoCD, Nexus, and Gitlab 
- 
+- Administration of Azure DevOps (previously VSTS), GoCD, Nexus, and Gitlab
+
 You may notice I try the alternatives of a lot of things. I'm not convinced that
 the first decision is always the best decision, and I'm willing to admit my mistakes.
 
@@ -56,7 +57,7 @@ all teams in our division.
 
 _May 2017 - December 2017_
 
-- Learned specifics on different print products & design elements for effective 
+- Learned specifics on different print products & design elements for effective
 communication with customers and fellow staff members
 - Received orders from clients, turning them into work orders and monitoring their progress through design & production
 - Ensured payments were received from clients with and without accounts, including sending statements and daily monitoring of accounts receivable list

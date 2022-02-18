@@ -2,8 +2,11 @@
 date = "2020-02-18"
 title = "Tools"
 slug = "tools"
-pagedesc = "A few of my favourite, current tools."
+pagedesc = "A few of my current favourite tools."
+summary = "A few of my current favourite tools."
 +++
+
+Last updated 2022, Feb 18.
 
 # Search
 

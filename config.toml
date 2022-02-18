@@ -4,7 +4,6 @@ title = "Phil Denhoff"
 
 theme = "denhoff"
 relativeURLs = true
-googleAnalytics = "UA-91669436-1"
 
 [params]
     description = "A personal blog & landing page"
