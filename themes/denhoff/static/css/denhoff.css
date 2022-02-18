@@ -35,6 +35,12 @@ a.nostyle:hover {
     opacity: 1;
 }
 
+/* External links have an outward arrow */
+a.external::after {
+    content: "↗";
+    text-decoration: underline;
+}
+
 .id-key {
     word-wrap: break-word;
 }

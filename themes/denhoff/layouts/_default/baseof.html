@@ -1,5 +1,6 @@
 {{ partial "header.html" . }}
   <body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
+    {{ partial "styles.html" . }}
     <div class="content container">
     {{ block "main" . -}}{{- end }}
     </div>
