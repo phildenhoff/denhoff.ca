@@ -10,7 +10,8 @@ Last updated 2022, Feb 18.
 
 # Search
 
-[Kagi](https://kagi.com/) is currently my browser of choice. Results are just as good as DuckDuckGo (and better than Google (hot take)), except you can also choose to rank certain websites higher or hide them altogether, and the lenses feature is great.
+[Kagi](https://kagi.com/) is currently my search engine of choice.
+Results are just as good as DuckDuckGo (and better than Google (hot take)), except you can also choose to rank certain websites higher or hide them altogether, and the lenses feature is great.
 The only downside I have is that something local like "pizza" shows me pretty random results, so I have to include my location for those ones — but that's not a big deal.
 
 # Code editing
