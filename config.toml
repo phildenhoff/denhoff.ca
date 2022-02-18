@@ -8,7 +8,7 @@ googleAnalytics = "UA-91669436-1"
 
 [params]
     description = "A personal blog & landing page"
-    keywords = "blog,developer,personal" # site keywords
+    keywords = "blog,developer,personal"
     themeColor = "theme-base-0c"
     footerText = "Made in Victoria, BC. 🥑"
     firstName = "Phil"
@@ -24,9 +24,9 @@ googleAnalytics = "UA-91669436-1"
     weight = 2
     url = "/projects/"
 [[menu.main]]
-    name = "Start"
+    name = "Tools"
     weight = 3
-    url = "/start"
+    url = "/tools"
 
 [markup.goldmark.renderer]
 unsafe= true
