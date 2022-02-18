@@ -206,6 +206,7 @@ figcaption p {
 }
 span.profile-photo {
     width: 35%;
+    aspect-ratio: 1/1;
 }
 
 .highlight pre {
