@@ -76,7 +76,7 @@ h1 {
   margin-bottom: 1rem;
 }
 
-p {
+p, pre {
   margin-bottom: 1rem;
 }
 
@@ -93,4 +93,21 @@ ul > li {
 
 .small-caps {
   font-variant: small-caps;
+}
+
+figure {
+  display: flex;
+flex-direction: column;
+width: 100%;
+margin: 3rem 0;
+}
+
+figure img {
+  width: 75%;
+align-self: center;
+margin-bottom: 1rem;
+}
+
+figure figcaption {
+  font-style: italic;
 }
