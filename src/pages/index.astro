@@ -1,61 +1,90 @@
 ---
-// Component Imports
-import Tour from '../components/Tour.astro';
-// You can import components from any supported Framework here!
+import DefaultPageLayout from "../layouts/default.astro";
 
-
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let title = 'My Astro Site';
-
-// Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<title>{title}</title>
 
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<style global>
-		@import "../styles/global.css";
-		@import "../styles/home.css";
-	</style>
+<DefaultPageLayout>
+  <span class="profile-photo">
+    <img
+      src="/assets/phildenhoff-headshot.jpg"
+      alt="Photo of me. Hi!"
+      l=""
+      width=""
+      height=""
+    />
+  </span>
+  <p>
+    Hi, I’m Phil, a fullstack software developer at <a
+      href="https://gofetch.ca"
+      target="_blank">GoFetch</a
+    >
+    . We’re helping pets live longer, healthier lives by increasing the amount of
+    preventative care they receive. And <a
+      href="mailto:phil@gofetch.ca?subject=I%27m%20looking%20to%20help%20pets%20live%20healthier%20lives"
+      >we’re hiring</a
+    >!
+  </p>
+  <p>
+    In working across the stack, I tend to focus on improving build
+    infrastructure, updating tooling, refactoring out technical debt, and
+    planning new features.
+  </p>
+  <p>
+    While at work we tend to use <a
+      href="https://elixir-lang.org/"
+      target="_blank">Elixir</a
+    >
+    , <span style="white-space: nowrap;"
+      ><a href="https://reactnative.dev/" target="_blank">React Native</a>
+      , and
+    </span><a href="https://www.typescriptlang.org/" target="_blank"
+      >TypeScript</a
+    >
+    , I’ve worked on a number of projects in other languages — including Python,
+    Nim, and Scala.
+  </p>
+  <p>
+    For more about what I’ve done, check out my <a href="./projects">projects</a
+    >!
+  </p>
+  <p>
+    If you’ve got something you think I’d be interested in, don’t hesitate to
+    email:
+  </p>
 
-	<style>
-		header {
-			display: flex;
-			flex-direction: column;
-			gap: 1em;
-			max-width: min(100%, 68ch);
-		}
-	</style>
-</head>
-<body>
-	<main>
-		<header>
-			<div>
-				<img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
-				<h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
-			</div>
-		</header>
+  <div class="social-icons">
+    <a href="mailto:hello@denhoff.ca" target="_blank" rel="noopener noreferrer">
+      <img alt="Email Icon" src="/assets/email.png" />
+    </a>
+  </div>
+</DefaultPageLayout>
 
-		<Tour />
+<style>
+  .profile-photo img {
+    width: 100%;
+    clip-path: circle(50% at center);
+  }
 
-		<!--
+  span.profile-photo {
+    width: 35%;
+    aspect-ratio: 1/1;
+  }
 
-		You can also use imported framework components directly in your markup!
-		
-		Note: by default, these components are NOT interactive on the client.
-		The `:visible` directive tells Astro to make it interactive.
-		
-		See https://docs.astro.build/core-concepts/component-hydration/ 
+  p {
+    margin-bottom: 1rem;
+  }
 
-		-->
+  .social-icons {
+    margin-top: 1em;
+    align-self: center;
+    display: grid;
+    grid-column-gap: 50px;
+  }
 
-	</main>
-</body>
-</html>
+  .social-icons > a > img {
+    width: 30px;
+    grid-row: 1/4;
+    height: 30px;
+  }
+</style>

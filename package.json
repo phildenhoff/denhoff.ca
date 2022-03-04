@@ -6,9 +6,11 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "format": "yarn prettier -w ."
   },
   "devDependencies": {
-    "astro": "^0.23.5"
+    "astro": "^0.23.5",
+    "prettier-plugin-astro": "^0.0.12"
   }
 }

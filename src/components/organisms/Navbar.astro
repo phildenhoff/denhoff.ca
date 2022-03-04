@@ -1,0 +1,66 @@
+<header>
+  <article>
+    <div class="home-header">
+      <h1 class="site-hero">
+        <a href="/">Phil<br />Denhoff</a>
+      </h1>
+      <ul class="navbar">
+        <li><a href="/about">About Me </a></li>
+        <li><a href="/projects">Projects </a></li>
+        <li><a href="/tools">Tools </a></li>
+      </ul>
+    </div>
+  </article>
+</header>
+
+<style>
+  .home-header {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2vh;
+  }
+
+  h1.site-hero {
+    font-family: "Playfair Display";
+    font-weight: 900;
+    font-size: var(--h1-header-font-size);
+    line-height: 0.9em;
+    cursor: default;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  li > a {
+    list-style: none;
+    font-size: 1.6em;
+    font-family: "Playfair Display";
+    line-height: 1.1em;
+    font-weight: 600;
+    color: var(--text-color-secondary);
+    text-align: right;
+  }
+
+  li > a:hover {
+    color: var(--text-color-secondary-highlight);
+    cursor: default;
+  }
+</style>
