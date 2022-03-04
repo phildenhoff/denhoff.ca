@@ -2,35 +2,16 @@
 
 A public-facing website for me.
 
-## Deploy instructions
+## Commands
 
-### Prerequisites
+| Command           | Action                                       |
+|:----------------  |:-------------------------------------------- |
+| `yarn`     | Installs dependencies                        |
+| `yarn dev`     | Starts local dev server at `[::1]:3000`  |
+| `yarn build`   | Build your production site to `./dist/`      |
+| `yarn preview` | Preview your build locally, before deploying |
 
-First,
-- install [Hugo](https://gohugo.io)
-  - NixOS: `nix-env -iA nixos.hugo`
-- instal NodeJS / npm
-- install `firebase-tools`
-- clone & build [start-page](https://github.com/phildenhoff/start-page)
+## Organization
 
-### Building
-- run `hugo`
-- Copy the contents of  `start-page/dist` into `public/start`
-- make a new file in `public/.well-known/matrix/server` with the content
-  - ```json
-    {
-        "m.server": "matrix.denhoff.ca:8448"
-    }
-    ```
-- make a new file in `public/.well-known/matrix/client` with content:
-    ```json
-    {
-        "m.homeserver": {
-            "base_url": "https://matrix.denhoff.ca"
-        },
-        "m.identity_server": {
-            "base_url": "https://matrix.denhoff.ca"
-        }
-    }
-    ```
-- run `firebase deploy`
+Store pages & components in `src/`.
+
