@@ -6,7 +6,10 @@ const { content } = Astro.props;
 const SITE = {
   title: "Phil Denhoff",
 };
-const page_title = content?.title !== undefined ? `${content.title} | ${SITE.title}` : SITE.title
+const page_title =
+  content?.title !== undefined
+    ? `${content.title} · ${SITE.title}`
+    : SITE.title;
 ---
 
 <!DOCTYPE html>
@@ -57,18 +60,24 @@ const page_title = content?.title !== undefined ? `${content.title} | ${SITE.tit
 </html>
 
 <style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
   .central-column {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
-    width: 80vw;
-    margin-left: 10vw;
+    width: 100%;
+    padding: 10vw;
   }
 
   @media only screen and (min-width: 768px) {
     .central-column {
-      width: 40vw;
-      margin-left: 30vw;
+      width: 80ch;
+      padding: 0;
     }
   }
 </style>

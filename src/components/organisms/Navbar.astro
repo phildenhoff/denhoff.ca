@@ -5,9 +5,9 @@
         <a href="/">Phil<br />Denhoff</a>
       </h1>
       <ul class="navbar">
-        <li><a href="/about">About Me </a></li>
-        <li><a href="/projects">Projects </a></li>
-        <li><a href="/tools">Tools </a></li>
+        <li class="navitem"><a href="/about">About Me </a></li>
+        <li class="navitem"><a href="/projects">Projects </a></li>
+        <li class="navitem"><a href="/tools">Tools </a></li>
       </ul>
     </div>
   </article>
@@ -15,14 +15,19 @@
 
 <style>
   .home-header {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    margin-top: 2vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 2vh;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .home-header {
+      margin-left: 10vw;
+      margin-right: 10vw;
+      margin-top: 2vh;
+    }
   }
 
   h1.site-hero {
@@ -38,18 +43,19 @@
     text-decoration: none;
   }
 
-  ul {
+  .navbar {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
   }
 
-  li {
+  .navbar li {
     list-style-type: none;
+    margin-bottom: 0;
   }
 
-  li > a {
+  .navitem > a {
     list-style: none;
     font-size: 1.6em;
     font-family: "Playfair Display";
@@ -59,7 +65,7 @@
     text-align: right;
   }
 
-  li > a:hover {
+  .navitem > a:hover {
     color: var(--text-color-secondary-highlight);
     cursor: default;
   }
