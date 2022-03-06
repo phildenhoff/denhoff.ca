@@ -1,66 +1,77 @@
 ---
 layout: ../layouts/default.astro
 title: About Phil
-description: "Phil is a fullstack software developer, interested in improving the interactions we have with the build world."
-abovethefold: "Currently a computer science student at UVic, I'm interested in improving the interactions we have with the built world."
 ---
 
-# skills
+Phil is a fullstack software developer, interested in improving developer and user experience alike.
 
-As a UX designer, I create prototypes, workshop wireframes, user test, gain
-feedback from stakeholders, and try to build the best experience I can. Most of
-my work is done as a UX-team-of-one, but I always enjoy working with folks who
-see things a little different than I do; that challenges our beliefs and builds
-a better product!
+# experience
 
-I'm skilled in wireframing, prototyping, Adobe XD, and Adobe Illustrator. I
-also have a solid grasp of programming topics and can work one-on-one with
-developers to make our UX the best.
+As a software developer, I tend to play a supporting role in writing library functions, doing refactors, creating reusable components, and designing feature architectures. I always work with my team to create software that is maintainable, understandable, and feature-complete, while balancing time-to-market. Software has no value until it's in our users hands.
 
-Like I said, I try to be a jack-of-all trades. So, I've also got experience with
-the following technologies:
+I'm generally tool-agnostic. I don't particularly care what tool we use — Javascript or Rust, Netlify or virtual machines deployed on-prem — so long as the tool satisfies the job.
 
-- Python, Java (Scala), Groovy, Javascript, Rust, C++, ...
-- Vue.js
-- Flask (Python) and Node.js (Javascript)
-- Amazon Web Services and Google Cloud Platform
-- Chef.io and Ansible
-- Administration of Azure DevOps (previously VSTS), GoCD, Nexus, and Gitlab
+## Languages
 
-You may notice I try the alternatives of a lot of things. I'm not convinced that
-the first decision is always the best decision, and I'm willing to admit my mistakes.
+- Javascript / Typescript
+- Elixir
+- Python
+- Scala (Java)
+
+## PaaS / IaaS
+
+- Amazon Web Services
+- Google Cloud Platform
+- Administration of an Azure DevOps (previously VSTS) organization of ~20 users, including build pipelines, code repositories, artifacts, and project management
+
+## Tools & utilities
+
+- Doppler.io for secrets management of multiple projects across multiple environments
+- Netlify and Render.com for continous deployments
+- Heroku
+- Chef.io & Ansible for managing reproducible builds
 
 # employment history
 
-<span class='small-caps'>**Codan Radio Communications | UX Designer & DevOps Engineer**</span>
+<span class='small-caps'>**GoFetch | Software Engineer**</span>
+
+_Mar 2021 - Present_
+
+- Set up a design system with the assistance of our Design team, using Storybook to demo new components.
+- Added front end features to React and React Native apps
+- Added backend features, such as the prototype of a buy-now-pay-later payment plan system, to a GraphQL API written in Elixir
+- Continously improved our development experience by...
+  - Adding automatic checks to our release process to ensure that Elixir API PRs satisfy code formatting conventions
+  - Migrating one React app from Webpack & Jest to Vite & Vitest to improve start up time and improve hot-replacement performance
+  - Adding tools to track our code quality, including metrics like file length and cognitive complexity
+- Improved quality in an existing continuous delivery pipeline, with the goal of creating a true continuous deployment system.
+  - Migrated project from three environments to five, to implement a clearer pipeline
+  - Implemented a shared secret management tool (Doppler)
+
+<span class='small-caps'>**MNP | Technical consultant**</span>
+
+_May 2020 - Feb 2021_
+
+- Designed and developed two IT policy sets for First Nations bands
+- Supported EducationPlanner BC's integration with a new Unit4 student management ERP by building a prototype API client and by writing documentation
+- Created a Wordpress website for a B.C. Ministry, balancing input from a design team, an agent acting for the ministry, and the ministry itself.
+- Designed, gathered requirements for, and built an interactive visualization site for a port using Vue.js
+
+<span class='small-caps'>**Codan Radio Communications | Software Developer Co-op & DevOps Engineer**</span>
 
 _April 2018 - August 2019_
 
-As UX Designer, I was responsible for redesigning Cascade's software interface.
-I kept in touch with a number of stakeholders (product owner, software team,
-marketing) to make sure all current requirements are satisfied, future
-requirements are satisfiable, that the software is easy to write and maintain,
-and that Cascade follows our existing brand guidelines. All while keeping the
-experience for the people using our product enjoyable.
+As a software developer, I worked on creating an automated test framework. As well, I
+- wrote production Scala and Java code;
+- participated in code review, design, and development;
+- focused on abstracting interactions with RF testing hardware for general use; we did functional programming in an Object-Oriented world.
 
-In my role as DevOps Engineer, I was responsible for assisting and
-de-risking a migration from GoCD, Nexus, and GitLab to Azure DevOps (previously
-VSTS). I also worked to keep the four-man team's sprint in focus in my role as
-scrum master. As a team, we built and maintained build agents using Chef.io,
-migrated projects from Mercurial and hap-hazard builds to automated builds from
-Git repositories, and began documenting an automated test framework for our
-all teams in our division.
+In my role as Junior DevOps Engineer,
 
-<span class='small-caps'>**Better Print Victoria | Customer service representative**</span>
-
-_May 2017 - December 2017_
-
-- Learned specifics on different print products & design elements for effective
-  communication with customers and fellow staff members
-- Received orders from clients, turning them into work orders and monitoring their progress through design & production
-- Ensured payments were received from clients with and without accounts, including sending statements and daily monitoring of accounts receivable list
-- Developed Wordpress website for [betterprintvictoria.ca](http://betterprintvictoria.com/), including content, and SEO
-- Performed GSuite and Google My Business setups for customers
+- I assisted and de-risked a migration from GoCD, Nexus, and GitLab to Azure DevOps (previously
+VSTS);
+- built and maintained build infrastructure using Chef.io including developer VMs and build agents;
+- automated builds, including converting Mercurial projects into Git
 
 <span class='small-caps'>**Reelgood Inc. | Junior software engineer**</span>
 
