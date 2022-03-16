@@ -3,6 +3,7 @@
   font-style: normal;
   font-weight: 700;
   src: url("/assets/fonts/playfairdisplay_700.woff2") format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   font-style: normal;
   font-weight: 900;
   src: url("/assets/fonts/playfairdisplay_900.woff2") format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("/assets/fonts/rasa_400.woff") format('woff2');
+  font-display: swap;
 }
 
 html {
