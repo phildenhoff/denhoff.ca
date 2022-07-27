@@ -9,7 +9,7 @@ summary: "Some projects I've worked on."
 
 ---
 
-# shorturl & domainator-nim
+# 🔗 shorturl & domainator-nim
 
 Inspired by some Hacker News article about Nim, I decided to test out the
 language. I first rewrote my existing
@@ -40,7 +40,9 @@ respective GitHub repos.
 
 _Last updated September 14, 2019._ [↑](#)
 
-# start-page
+---
+
+# 🏕️ start-page
 _Check out the [GitHub repository](https://github.com/phildenhoff/start-page)! Live demo [here](/start)._
 
 I usually only use the same few websites day-to-day. The idea behind start-page was that it would be a website built to get me from a browser I had just opened to the website I wanted to go to faster. **“Get there faster.”**
@@ -75,8 +77,9 @@ In the end, I don’t use start-page much, but I do like the idea of what I star
 
 _Last updated September 3, 2018._ [↑](#)
 
+---
 
-# choretracker
+# 🧹 choretracker
 _Check out the [GitHub repository](https://github.com/phildenhoff/choretracker)!_
 
 My roommates and I weren't doing all the chores we were supposed to, so I started looking
@@ -119,8 +122,9 @@ Screen shots to come.
 
 _Last updated September 3, 2018._ [↑](#)
 
+---
 
-# hirethissnake
+# 🐍 hirethissnake
 
 In 2017, I participated in the [Battlesnake](https://www.battlesnake.io/) competition
 alongside  [Daniel Frankcom](https://www.linkedin.com/in/daniel-frankcom-28a30a82/),
