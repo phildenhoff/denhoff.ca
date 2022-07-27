@@ -43,7 +43,7 @@ _Last updated September 14, 2019._ [↑](#)
 ---
 
 # 🏕️ start-page
-_Check out the [GitHub repository](https://github.com/phildenhoff/start-page)! Live demo [here](/start)._
+_Check out the [GitHub repository](https://github.com/phildenhoff/start-page)! Live demo [here](https://start.denhoff.ca)._
 
 I usually only use the same few websites day-to-day. The idea behind start-page was that it would be a website built to get me from a browser I had just opened to the website I wanted to go to faster. **“Get there faster.”**
 
