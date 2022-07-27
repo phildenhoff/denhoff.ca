@@ -1,0 +1,6 @@
+ports:
+  - port: 3000
+    visibility: public
+tasks:
+  - init: yarn
+    command: yarn dev
