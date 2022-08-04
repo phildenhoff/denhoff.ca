@@ -3,11 +3,11 @@ layout: ../layouts/default.astro
 title: About Phil
 ---
 
-Phil is a fullstack software developer, interested in improving developer and user experience alike.
+Phil is a fullstack software developer interested in improving developer and user experience alike.
 
 # experience
 
-As a software developer, I tend to play a supporting role in writing library functions, doing refactors, creating reusable components, and designing feature architectures. I always work with my team to create software that is maintainable, understandable, and feature-complete, while balancing time-to-market. Software has no value until it's in our users hands.
+As a software developer, I tend to play a supporting role in writing library functions, doing refactors, creating reusable components, and designing feature architectures. I work with my team to create software that is maintainable, understandable, and feature-complete, while balancing our time-to-market. Software has no value until it's in our users hands.
 
 I'm generally tool-agnostic. I don't particularly care what tool we use — Javascript or Rust, Netlify or virtual machines deployed on-prem — so long as the tool satisfies the job.
 
@@ -20,6 +20,7 @@ I'm generally tool-agnostic. I don't particularly care what tool we use — Java
 
 ## PaaS / IaaS
 
+- Heroku
 - Amazon Web Services
 - Google Cloud Platform
 - Administration of an Azure DevOps (previously VSTS) organization of ~20 users, including build pipelines, code repositories, artifacts, and project management
@@ -28,7 +29,6 @@ I'm generally tool-agnostic. I don't particularly care what tool we use — Java
 
 - Doppler.io for secrets management of multiple projects across multiple environments
 - Netlify and Render.com for continous deployments
-- Heroku
 - Chef.io & Ansible for managing reproducible builds
 
 # employment history
@@ -52,8 +52,8 @@ _Mar 2021 - Present_
 
 _May 2020 - Feb 2021_
 
-- Designed and developed two IT policy sets for First Nations bands
-- Supported EducationPlanner BC's integration with a new Unit4 student management ERP by building a prototype API client and by writing documentation
+- Designed and developed IT policies for First Nations bands
+- Supported EducationPlanner BC's integration with a new student management ERP by building a prototype API client and by writing documentation
 - Created a Wordpress website for a B.C. Ministry, balancing input from a design team, an agent acting for the ministry, and the ministry itself.
 - Designed, gathered requirements for, and built an interactive visualization site for a port using Vue.js
 
