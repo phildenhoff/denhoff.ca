@@ -6,10 +6,12 @@ A public-facing website for me.
 
 | Command        | Action                                       |
 | :------------- | :------------------------------------------- |
-| `yarn`         | Installs dependencies                        |
-| `yarn dev`     | Starts local dev server at `[::1]:3000`      |
-| `yarn build`   | Build your production site to `./dist/`      |
-| `yarn preview` | Preview your build locally, before deploying |
+| `bun install`         | Installs dependencies                        |
+| `bun run dev`     | Starts local dev server at `[::1]:3000`      |
+| `bun run build`   | Build your production site to `./dist/`      |
+| `bun run preview` | Preview your build locally, before deploying |
+
+You can also use `yarn`.
 
 ## Organization
 
