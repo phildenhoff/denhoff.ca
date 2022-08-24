@@ -10,7 +10,13 @@
     "format": "yarn prettier -w ."
   },
   "devDependencies": {
+    "@types/react": "^18.0.17",
     "astro": "^0.23.5",
     "prettier-plugin-astro": "^0.0.12"
+  },
+  "dependencies": {
+    "@nanostores/persistent": "^0.6.0",
+    "@nanostores/react": "^0.3.0",
+    "nanostores": "^0.6.0"
   }
 }
