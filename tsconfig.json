@@ -1,7 +1,18 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
+    // Solid specific settings
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    // Enable top-level await, and other modern ESM features.
+    "target": "ESNext",
+    "module": "ESNext",
+    // Enable node-style module resolution, for things like npm package imports.
     "moduleResolution": "node",
-    "jsx": "react"
+    // Enable JSON imports.
+    "resolveJsonModule": true,
+    // Enable stricter transpilation for better output.
+    "isolatedModules": true,
+    // Astro will directly run your TypeScript code, no transpilation needed.
+    "noEmit": true
   }
 }
