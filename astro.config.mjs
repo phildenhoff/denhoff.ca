@@ -1,8 +1,9 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import mdx from "@astrojs/mdx";
-
 import prefetch from "@astrojs/prefetch";
+
+import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,5 +13,5 @@ export default defineConfig({
   server: {
     host: "::1"
   },
-  integrations: [react(), mdx(), prefetch()]
+  integrations: [react(), mdx(), prefetch(), solidJs()]
 });
