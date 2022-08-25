@@ -1,5 +1,5 @@
 import { useStore } from "@nanostores/solid";
-import { createSignal, onMount, onCleanup, Show } from "solid-js";
+import { createSignal, onMount, onCleanup, Show, createEffect } from "solid-js";
 
 import { command, setCommand } from "../../../stores/command";
 import { preventDefault } from "../../../utils/events";
@@ -10,6 +10,10 @@ import styles from "./CommandPalette.module.css";
 export const CommandPalette = () => {
   const [isOpen, setIsOpen] = createSignal(false);
   const message = useStore(command);
+
+  createEffect(() => {
+    if (isOpen()) document.getElementById("command-palette-input")?.focus();
+  });
 
   const keyboardEventHandlers = [
     {
@@ -33,14 +37,12 @@ export const CommandPalette = () => {
   ];
 
   onMount(() => {
-    console.log("on mounted");
     keyboardEventHandlers.forEach((handler) => {
       document.addEventListener(handler.event, handler.handler);
     });
   });
 
   onCleanup(() => {
-    console.log("on cleaned up");
     keyboardEventHandlers.forEach((handler) => {
       document.removeEventListener(handler.event, handler.handler);
     });
@@ -54,11 +56,13 @@ export const CommandPalette = () => {
       >
         <div class={styles.commandPalette} onClick={preventDefault}>
           <input
+            id="command-palette-input"
+            type="text"
             autofocus
             class={styles.commandPalette__input}
             placeholder="You thought this app would have a command bar? wow"
             value={message()}
-            onChange={(e) => setCommand(e.target.value)}
+            onInput={(e) => setCommand(e.target.value)}
           />
           <button class={styles.btn_close} onClick={() => setIsOpen(false)}>
             <svg
