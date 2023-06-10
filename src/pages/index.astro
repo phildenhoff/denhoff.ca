@@ -19,45 +19,49 @@ import DefaultPageLayout from "../layouts/default.astro";
       href="https://gofetch.ca"
       target="_blank">GoFetch</a
     >
-    . We’re helping pets live longer, healthier lives by increasing the amount of
-    preventative care they receive. And <a
-      href="mailto:phil@gofetch.ca?subject=I%27m%20looking%20to%20help%20pets%20live%20healthier%20lives"
-      >we’re hiring</a
-    >!
+    . I focus on writing maintainable, tested code that adds functionality our users
+    care about. Recently, I've been focused on our
+    <a href="https://reactnative.dev/" target="_blank">React Native</a> mobile apps,
+    but I also work on our
+    <a href="https://elixir-lang.org/" target="_blank">Elixir</a>
+    backend, as well as our
+    <a href="https://react.dev/" target="_blank">React</a>
+    and
+    <a href="https://svelte.dev/" target="_blank">Svelte</a>
+    web apps.
   </p>
   <p>
     In working across the stack, I tend to focus on improving build
     infrastructure, updating tooling, refactoring out technical debt, and
     planning new features.
   </p>
-  <p>
-    While at work we tend to use <a
-      href="https://elixir-lang.org/"
-      target="_blank">Elixir</a
-    >
-    , <span style="white-space: nowrap;"
-      ><a href="https://reactnative.dev/" target="_blank">React Native</a>
-      , and
-    </span><a href="https://www.typescriptlang.org/" target="_blank"
-      >TypeScript</a
-    >
-    , I’ve worked on a number of projects in other languages — including Python,
-    Nim, and Scala.
-  </p>
+  <p>I’ve worked in many other languages — including Python and Scala.</p>
   <p>
     For more about what I’ve done, check out my <a href="./projects">projects</a
     >!
   </p>
-  <p>
-    If you’ve got something you think I’d be interested in, don’t hesitate to
-    email:
-  </p>
-
-  <div class="social-icons">
-    <a href="mailto:hello@denhoff.ca" target="_blank" rel="noopener noreferrer">
-      <img alt="Email Icon" src="/assets/email.png" />
-    </a>
-  </div>
+  <section class="cta">
+    <h2>Reach out!</h2>
+    <p>
+      I'd love to hear about what you're working on. I'm always looking for new
+      projects to contribute to —
+      <a
+        href="mailto:hello@denhoff.ca"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        send me an email!
+      </a>
+    </p>
+    <p>
+      I'm also on
+      <a href="https://www.linkedin.com/in/phildenhoff/" target="_blank">
+        LinkedIn
+      </a>
+      and
+      <a href="https://github.com/phildenhoff" target="_blank"> GitHub </a>.
+    </p>
+  </section>
 </DefaultPageLayout>
 
 <style>
@@ -87,5 +91,12 @@ import DefaultPageLayout from "../layouts/default.astro";
     width: 30px;
     grid-row: 1/4;
     height: 30px;
+  }
+
+  .cta {
+    width: 100%;
+    background-color: #3d8bd2;
+    padding: 16px;
+    color: #e9f2ff;
   }
 </style>
