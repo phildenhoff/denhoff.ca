@@ -3,78 +3,95 @@ layout: ../layouts/default.astro
 title: About Phil
 ---
 
-Phil is a fullstack software developer interested in improving developer and user experience alike.
+I’m a fullstack software developer focused on maintainable, tested, and
+feature-complete software.
 
 # experience
 
-As a software developer, I tend to play a supporting role in writing library functions, doing refactors, creating reusable components, and designing feature architectures. I work with my team to create software that is maintainable, understandable, and feature-complete, while balancing our time-to-market. Software has no value until it's in our users hands.
+On teams, I often play a supporting role: writing library
+functions, refactoring for clarity, extracting reusable components, and
+architecting new features.
+However, I’ve recently been the lead mobile dev on a React Native project, so
+I don’t shy away from feature work.
 
-I'm generally tool-agnostic. I don't particularly care what tool we use — Javascript or Rust, Netlify or virtual machines deployed on-prem — so long as the tool satisfies the job.
+I’m generally tool-agnostic, I tend to try many tools until I find something
+just barely complicated enough to satisfy my needs.
+I think many simple tools are better than few smart tools.
+What that often means is that I’m open to using any tool that satisfies the
+job, and I’m willing to learn new tools to get the job done.
 
 ## Languages
 
 - Javascript / Typescript
-- Elixir
 - Python
+- Elixir
 - Scala (Java)
+- Go & Rust: limited experience, but interested in learning more
 
-## PaaS / IaaS
+## Familiar PaaS / IaaS
 
 - Heroku
-- Amazon Web Services
-- Google Cloud Platform
-- Administration of an Azure DevOps (previously VSTS) organization of ~20 users, including build pipelines, code repositories, artifacts, and project management
+- Netlify
+- Cloudflare Pages
+- Amazon Web Services (AWS)
+- Render.com
+- Google Cloud Platform (GCP)
 
 ## Tools & utilities
 
-- Doppler.io for secrets management of multiple projects across multiple environments
-- Netlify and Render.com for continous deployments
-- Chef.io & Ansible for managing reproducible builds
+- GitHub Actions
+- Doppler.io
+- Chef.io & Ansible
+- Azure DevOps
 
 # employment history
 
-<span class='small-caps'>**GoFetch | Software Engineer**</span>
+<section class="cta" style="margin-bottom: 24px;">
+  <h2>You could be here!</h2>
+  <p>
+    {" "}
+    I’m always looking for new opportunities. If you think I’d be a good fit for
+    your team, <a href="mailto:hello@denhoff.ca/">send me an email</a> and let’s
+    chat!
+  </p>
+</section>
+
+<span class="small-caps">**GoFetch | Software Engineer**</span>
 
 _Mar 2021 - Present_
 
-- Set up a design system with the assistance of our Design team, using Storybook to demo new components.
-- Added front end features to React and React Native apps
-- Added backend features, such as the prototype of a buy-now-pay-later payment plan system, to a GraphQL API written in Elixir
+- Launched GoFetch Pay, a product focused on bridge financing for vet care, after completing a ground-up rewrite of the mobile app using React Native with TypeScript in four months. At the same time, I supported our backend team while they rewrote our Elixir backend.
+- Worked with our Product & Design teams to create design system components, demoing them using Storybook.
+- Integrated our mobile app with Stripe, Plaid, and Peach for credit card & bank payments towards loans, as well as adding identity verification.
+- Added backend features such as the prototype of a buy-now-pay-later payment plan system to a GraphQL API written in Elixir.
 - Continously improved our development experience by...
   - Adding automatic checks to our release process to ensure that Elixir API PRs satisfy code formatting conventions
   - Migrating one React app from Webpack & Jest to Vite & Vitest to improve start up time and improve hot-replacement performance
   - Adding tools to track our code quality, including metrics like file length and cognitive complexity
-- Improved quality in an existing continuous delivery pipeline, with the goal of creating a true continuous deployment system.
-  - Migrated project from three environments to five, to implement a clearer pipeline
-  - Implemented a shared secret management tool (Doppler)
+- Rebuilt legacy CircleCI pipelines to use GitHub Actions.
+- Reduced CI time by about 3x by using task caching & distributed execution.
+- Integrated Doppler into our dev, CI, and deploy processes to improve saftey around secret management.
+- Reviewed code, at one point catching an absolutely critical design bug — email me and ask about it, I’ll be happy to tell you. It’s a hell of a story.
+- Used an agile process to plan and execute work. During my time we migrated from an agile process to capital-A Agile process using Jira, then — after months of frustration towards how slow the process was — jettisoned back to a very lightweight agile process using GitHub Projects.
 
-<span class='small-caps'>**MNP | Technical consultant**</span>
+<span class="small-caps">**MNP | Technical consultant**</span>
 
 _May 2020 - Feb 2021_
 
 - Designed and developed IT policies for First Nations bands
-- Supported EducationPlanner BC's integration with a new student management ERP by building a prototype API client and by writing documentation
-- Created a Wordpress website for a B.C. Ministry, balancing input from a design team, an agent acting for the ministry, and the ministry itself.
-- Designed, gathered requirements for, and built an interactive visualization site for a port using Vue.js
+- Created a giant Postman API collection for a client who was setting up a new student management system demonstrating how to use different endpoints in the API.
+- Developed an interactive Vue.js-based data visualization website.
+- Created and customized microsites using Wordpress for a Canadian provincial government.
 
-<span class='small-caps'>**Codan Radio Communications | Software Developer Co-op & DevOps Engineer**</span>
+<span class="small-caps">
+  **Codan Radio Communications | Software Developer Co-op & DevOps Engineer**
+</span>
 
 _April 2018 - August 2019_
 
-As a software developer, I worked on creating an automated test framework. As well, I
-- wrote production Scala and Java code;
-- participated in code review, design, and development;
-- focused on abstracting interactions with RF testing hardware for general use; we did functional programming in an Object-Oriented world.
-
-In my role as Junior DevOps Engineer,
-
-- I assisted and de-risked a migration from GoCD, Nexus, and GitLab to Azure DevOps (previously
-VSTS);
-- built and maintained build infrastructure using Chef.io including developer VMs and build agents;
-- automated builds, including converting Mercurial projects into Git
-
-<span class='small-caps'>**Reelgood Inc. | Junior software engineer**</span>
-
-_September 2016 - February 2017_
-
-- Used React, Redux, PhantomJS, CSS and HTML for web development, as well as performing miscellaneous tasks for up-and-coming streaming service aggregator.
+- Reduced deployment time by 50% for a frequently used deployment process by deleting _just one character!_ Ask me about it, I’ll be happy to tell you.
+- Developed a Python script library for OS management for a software defined radio.
+- Automated manual builds using Gradle, and migrated CI from Jenkins to Azure DevOps.
+- Used automation tools like Chef.io and VMWare to create CI build agents and virtual machines with matching environments.
+- Designed a new radio dashboard UI. Created a component library and conducted user testing.
+- Began an automated test framework for radio equipment using Scala.
