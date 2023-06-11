@@ -1,13 +1,21 @@
 <header>
   <article>
     <div class="home-header">
-      <h1 class="site-hero">
-        <a class="navLink" href="/" rel="prefetch">Phil<br />Denhoff</a>
-      </h1>
+      <a class="navLink navLink--hero" href="/" rel="prefetch">
+        <h1 class="site-hero">
+          Phil<br />Denhoff
+        </h1>
+      </a>
       <ul class="navbar">
-        <li class="navitem"><a class="navLink" href="/about" rel="prefetch">About Me </a></li>
-        <li class="navitem"><a class="navLink" href="/projects" rel="prefetch">Projects </a></li>
-        <li class="navitem"><a class="navLink" href="/tools" rel="prefetch">Tools </a></li>
+        <li class="navitem">
+          <a class="navLink" href="/about" rel="prefetch">About Me </a>
+        </li>
+        <li class="navitem">
+          <a class="navLink" href="/projects" rel="prefetch">Projects </a>
+        </li>
+        <li class="navitem">
+          <a class="navLink" href="/tools" rel="prefetch">Tools </a>
+        </li>
       </ul>
     </div>
   </article>
@@ -37,10 +45,23 @@
     line-height: 0.9em;
     cursor: default;
     text-decoration: none;
+    width: fit-content;
+    margin-bottom: 0;
   }
 
   .navLink {
     text-decoration: none;
+    padding: 0px 8px;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .navLink--hero {
+    padding: 8px;
+  }
+
+  .navLink:hover {
+    box-shadow: 1px 2px 3px 2px #bacada6b;
+    border-radius: 8px;
   }
 
   .navbar {
@@ -66,7 +87,20 @@
   }
 
   .navitem > a:hover {
-    color: var(--text-color-secondary-highlight);
     cursor: default;
+  }
+
+  .navLink:hover,
+  .navitem > a:hover {
+    color: var(--color-blue-primary-light);
+    background-color: var(--color-blue-primary);
+  }
+
+  @media (prefers-color-scheme: light) {
+    .navLink:hover,
+    .navitem > a:hover {
+      color: var(--color-blue-primary);
+      background-color: var(--color-blue-primary-light);
+    }
   }
 </style>

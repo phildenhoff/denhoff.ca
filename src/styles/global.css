@@ -36,6 +36,9 @@ html {
   --text-color-primary-highlight: #121212;
   --text-color-secondary: #535353;
   --text-color-secondary-highlight: #535353;
+  --color-blue-dark: #12375a;
+  --color-blue-primary: #3d8bd2;
+  --color-blue-primary-light: #f1f7ff;
   --background-color: #f9fafb;
 }
 
