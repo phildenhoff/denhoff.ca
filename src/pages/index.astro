@@ -6,13 +6,7 @@ import DefaultPageLayout from "../layouts/default.astro";
 
 <DefaultPageLayout>
   <span class="profile-photo">
-    <img
-      src="/assets/phildenhoff-headshot.jpg"
-      alt="Photo of me. Hi!"
-      l=""
-      width=""
-      height=""
-    />
+    <img src="/assets/phildenhoff-headshot.jpg" alt="Photo of me. Hi!" />
   </span>
   <p>
     Hi, I’m Phil, a fullstack software developer at <a
@@ -68,6 +62,7 @@ import DefaultPageLayout from "../layouts/default.astro";
   .profile-photo img {
     width: 100%;
     clip-path: circle(50% at center);
+    aspect-ratio: 1/1;
   }
 
   span.profile-photo {
