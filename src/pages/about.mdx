@@ -3,6 +3,8 @@ layout: ../layouts/default.astro
 title: About Phil
 ---
 
+import { CallToAction } from "../components/molecules/CallToAction";
+
 I’m a fullstack software developer focused on maintainable, tested, and
 feature-complete software.
 
@@ -46,15 +48,14 @@ job, and I’m willing to learn new tools to get the job done.
 
 # employment history
 
-<section class="cta" style="margin-bottom: 24px;">
-  <h2>You could be here!</h2>
+<CallToAction title="You could be here!">
   <p>
-    {" "}
     I’m always looking for new opportunities. If you think I’d be a good fit for
     your team, <a href="mailto:hello@denhoff.ca/">send me an email</a> and let’s
     chat!
   </p>
-</section>
+</CallToAction>
+<span style="margin-bottom: 24px" />
 
 <span class="small-caps">**GoFetch | Software Engineer**</span>
 

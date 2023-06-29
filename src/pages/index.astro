@@ -1,5 +1,6 @@
 ---
 import DefaultPageLayout from "../layouts/default.astro";
+import { CallToAction } from "../components/molecules/CallToAction";
 ---
 
 <DefaultPageLayout>
@@ -32,8 +33,7 @@ import DefaultPageLayout from "../layouts/default.astro";
     For more about what I’ve done, check out my <a href="./projects">projects</a
     >!
   </p>
-  <section class="cta">
-    <h2>Reach out!</h2>
+  <CallToAction title={"Reach out!"}>
     <p>
       I’d love to hear about what you’re working on. I’m always looking for new
       projects to contribute to —
@@ -53,7 +53,7 @@ import DefaultPageLayout from "../layouts/default.astro";
       and
       <a href="https://github.com/phildenhoff" target="_blank"> GitHub </a>.
     </p>
-  </section>
+  </CallToAction>
 </DefaultPageLayout>
 
 <style>

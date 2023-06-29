@@ -18,8 +18,10 @@
     "solid-js": "^1.4.3"
   },
   "dependencies": {
+    "@babel/core": ">=7.20.12 <8.0.0",
     "@nanostores/persistent": "^0.6.0",
     "@nanostores/solid": "^0.2.0",
-    "nanostores": "^0.6.0"
+    "nanostores": "^0.6.0",
+    "rollup": ">=2.0.0 <3.0.0 || >=3.0.0 <4.0.0"
   }
 }
