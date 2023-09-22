@@ -19,7 +19,7 @@ const pageTitle = content?.title !== undefined
 <html lang="en">
   <Header pageTitle={pageTitle}></Header>
   <body>
-    <CommandPalette client:load/>
+    <CommandPalette client:only="solid-js"/>
     <Navbar />
     <main>
       <div class="central-column">
