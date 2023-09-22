@@ -15,7 +15,7 @@
     "@astrojs/solid-js": "^3.0.1",
     "astro": "3.1.2",
     "prettier-plugin-astro": "^0.0.12",
-    "solid-js": "^1.4.3"
+    "solid-js": "1.7.2"
   },
   "dependencies": {
     "@babel/core": ">=7.20.12 <8.0.0",
