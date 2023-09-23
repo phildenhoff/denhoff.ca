@@ -64,6 +64,23 @@ body {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+
+  pre[data-theme='light'],
+  code[data-theme='light'] {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: light),
+(prefers-color-scheme: no-preference) {
+
+  pre[data-theme='dark'],
+  code[data-theme='dark'] {
+    display: none;
+  }
+}
+
 a {
   text-decoration: underline;
   color: inherit;
@@ -72,8 +89,7 @@ a {
   transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-a[href^="http"]:not([href^="https://denhoff.ca"]):not(.no-external-icon)::after
-{
+a[href^="http"]:not([href^="https://denhoff.ca"]):not(.no-external-icon)::after {
   content: "↗";
   font-family: monospace;
   position: sticky;
@@ -107,7 +123,7 @@ ul {
   margin: 1rem 0;
 }
 
-ul > li {
+ul>li {
   margin-bottom: 0.3rem;
 }
 

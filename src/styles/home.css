@@ -12,15 +12,6 @@
   }
 }
 
-code {
-  font-family: var(--font-mono);
-  font-size: 0.9em;
-  background: var(--color-light);
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-}
-
 a {
   color: inherit;
 }
-
