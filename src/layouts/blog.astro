@@ -1,0 +1,32 @@
+---
+import DefaultLayout from "./default.astro";
+
+const SITE = {
+  title: "Phil Denhoff",
+};
+
+const { content } = Astro.props;
+const pageTitle = content?.title !== undefined
+  ? `${content.title} · ${SITE.title}`
+  : SITE.title;
+import type { MarkdownLayoutProps } from 'astro';
+
+type Props = MarkdownLayoutProps<{
+  // Define frontmatter props here
+  title: string;
+  author: string;
+  date: string;
+}>;
+
+// Now, `frontmatter`, `url`, and other Markdown layout properties
+// are accessible with type safety
+const { frontmatter, url } = Astro.props;
+
+const publishDate = new Intl.DateTimeFormat('en-CA').format(frontmatter.pubDate)
+---
+
+<DefaultLayout content={{title: frontmatter.title}} >
+    <h1>{frontmatter.title}</h1>
+    <p>Written on {publishDate}</p>
+    <slot />
+</DefaultLayout>
