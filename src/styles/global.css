@@ -64,6 +64,63 @@ body {
   }
 }
 
+pre {
+  overflow: auto;
+  overflow-wrap: break-word;
+  padding: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  white-space: pre-wrap;
+}
+
+pre code {
+  white-space: pre-wrap;
+}
+
+/** BEGIN: Line numbers (for rescript) */
+
+code {
+  counter-reset: line;
+}
+
+code[data-language=rescript]>[data-line]::before {
+  content: counter(line);
+  counter-increment: line;
+  display: inline-block;
+  border-right: 2px solid;
+  width: 1rem;
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+  text-align: right;
+}
+
+code[data-line-numbers-max-digits='2']>[data-line]::before {
+  width: 2rem;
+}
+
+code[data-line-numbers-max-digits='3']>[data-line]::before {
+  width: 3rem;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  [data-line]::before {
+    color: #35374A;
+    border-color: #35374A;
+  }
+}
+
+@media (prefers-color-scheme: light),
+(prefers-color-scheme: no-preference) {
+  [data-line]::before {
+    color: #ADB3C3;
+    border-color: #ADB3C3;
+  }
+}
+
+
+/** END: Line numbers */
+
 @media (prefers-color-scheme: dark) {
 
   pre[data-theme='light'],
