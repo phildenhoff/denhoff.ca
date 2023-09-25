@@ -1,5 +1,5 @@
 ---
-title: Extending Typescript apps with Rescript using Nx
+title: Using Nx to build ReScript libraries for TypeScript apps
 pubDate: 2023-09-22
 description: 'How we can build Rescript source code into Typescript, and use it in another Typescript app.'
 author: 'Phil Denhoff'
@@ -29,6 +29,8 @@ Let's see what using it looks like.
 </CallToAction>
 
 # Creating the Nx workspace
+
+_Side note_: You can [view the final repo on GitHub](https://github.com/phildenhoff/rescript-and-node-nx).
 
 First, we need to create an empty Nx workspace for us to try all this out in.
 I'll call my example workspace `org` — feel free to use something else, but where I write `@org` you'll need to replace it with your workspace name.
@@ -73,6 +75,7 @@ pnpm nx generate @nx/js:library --name=finance \
   --directory=libs/finance \
   --importPath=@org/finance
 ```
+(If you are asked "What should be the project name and where should it be generated", pick libs/finance).
 
 With that done (I recommend committing your changes along the way, but I won't remind you at every step), we need to add some more missing stuff.
 
@@ -127,10 +130,11 @@ So, **we need to ensure that our generated file can reference its imports**.
 One way of doing that is by bundling all of the imports into one giant file.
 Hopefully esbuild is good at trimming dead code...
 
+Third, we need to make sure we're set up to use ES Modules, by changing the `format` from `cjs` to `esm`.
 
 Our `api/project.json` file should end up looking like this:
 
-```json
+```json {11,15,16}
 // api/project.json
 {
   "name": "api",
@@ -175,7 +179,36 @@ In the project root, run
 pnpm add rescript
 ```
 
-^^TODO^^: DO YOU NEED TO `pnpm i` in the @org/finance now? We didn't add rescript yet
+We also need to add the ReScript version we just installed into our `libs/finance/package.json`.
+We can get the version with
+
+```shell
+cat package.json | grep rescript
+```
+
+And then add it to `libs/finance/package.json`.
+**Generally, we should not have to do this.**
+Nx should be able to manage our package.json automatically for us.
+
+```json {7}
+// libs/finance/package.json
+{
+  "name": "@org/finance",
+  "version": "0.0.1",
+  "type": "module",
+  "dependencies": {
+    "rescript": "^10.1.4"
+  },
+  "devDependencies": {}
+}
+```
+
+Finally, we have to make sure it's installed in the node_modules in `libs/finance` by running `pnpm install` in that folder:
+
+```shell
+cd libs/finance
+pnpm install
+```
 
 Next, we'll create a Rescript config file ("bsconfig.json") in `libs/finance`.
 Use the config below, which is based on the [recommended config](https://rescript-lang.org/docs/manual/latest/installation#integrate-into-an-existing-js-project) but includes a `gentypeconfig` [directive](https://rescript-lang.org/docs/manual/latest/build-configuration-schema#:~:text=gentypeconfig) to generate Typescript types when we use the `@genType` annotation.
@@ -188,7 +221,7 @@ You can [read more about Rescript's GenType in their docs](https://rescript-lang
   "sources": [
     {
       "dir": "src",
-      "subdirs": "true"
+      "subdirs": true
     }
   ],
   "package-specs": [
@@ -241,7 +274,11 @@ We won't go over the details of `compoundInterest` — feel free to use any samp
 
 Now, compile your ReScript file to JS & TS by running `pnpm rescript build` while in the `libs/finance` directory.
 You should see two new files in `libs/finance/src`: `TimeValue.bs.js` and `TimeValue.gen.ts`.
-This is what our `api` application will use. However, it's not yet available as an export from our library.
+This is what our `api` application will use.
+However, it's not yet available as an export from our library.
+
+**Note**: you'll also see a new `libs/finance/lib` folder — you can .gitignore this.
+It's build information for ReScript, but we don't need to keep it around AFAIK.
 
 To make the exports available, we'll add them to our `libs/finance/index.ts`. Update it to this:
 
@@ -252,6 +289,9 @@ export * from './TimeValue.gen';
 
 Here, we're exporting _only_ the TypeScript code, to ensure that downstream callees call the right function.
 We could _instead_ export from "TimeValue.bs", but that would export only the JavaScript code, which is not really what we want — it has no type safety.
+
+Note: do not include the .ts extension.
+Our `api` build does not support including it.
 
 With Rescript building our code manually, let's look at adding our build as an Nx task.
 
@@ -301,7 +341,8 @@ We tell Nx to run the `pnpm rescript build` command when we run our build task; 
 We also set the current working directory (`cwd`) of the task to the project's directory, `libs/finance`.
 
 Okay, nice! That's all we need to have Nx run the build of our ReScript source code.
-You can run it with `pnpm nx build finance`.
+You can run it with `pnpm nx build finance` **from the repo root**.
+The build will not work from the `libs/finance` directory.
 
 If you run it again, it should take almost no time as Nx detected the inputs had not changed.
 If you keep the index.ts and .res files the same, and delete the .bs.js and .gen.ts files, and re-run the build, it should also take almost no time.
