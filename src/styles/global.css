@@ -167,7 +167,6 @@ code[data-line-numbers-max-digits='3']>[data-line]::before {
 a {
   text-decoration: underline;
   color: inherit;
-  cursor: default;
   opacity: 1;
   transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }

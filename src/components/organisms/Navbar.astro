@@ -46,7 +46,6 @@
     font-weight: 700;
     font-size: var(--h1-header-font-size);
     line-height: 0.9em;
-    cursor: default;
     text-decoration: none;
     width: fit-content;
     margin-bottom: 0;
@@ -60,11 +59,6 @@
 
   .navLink--hero {
     padding: 8px;
-  }
-
-  .navLink:hover {
-    box-shadow: 1px 2px 3px 2px #bacada6b;
-    border-radius: 8px;
   }
 
   .navbar {
@@ -89,21 +83,8 @@
     text-align: right;
   }
 
-  .navitem > a:hover {
-    cursor: default;
-  }
-
   .navLink:hover,
   .navitem > a:hover {
-    color: var(--color-blue-primary-light);
-    background-color: var(--color-blue-primary);
-  }
-
-  @media (prefers-color-scheme: light) {
-    .navLink:hover,
-    .navitem > a:hover {
-      color: var(--color-blue-primary);
-      background-color: var(--color-blue-primary-light);
-    }
+    color: var(--color-blue-primary);
   }
 </style>
