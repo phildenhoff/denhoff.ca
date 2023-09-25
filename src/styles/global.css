@@ -123,6 +123,21 @@ code[data-line-numbers-max-digits='3']>[data-line]::before {
 
 @media (prefers-color-scheme: dark) {
 
+  [data-highlighted-line] {
+    /* diffEditor.insertedLineBackground */
+    background-color: #a6e3a126;
+  }
+
+  [data-highlighted-line]::before {
+    border-left: 1px solid blue;
+  }
+
+
+  [data-highlighted-chars] {
+    border-radius: .25rem;
+    background-color: #FADB146B;
+  }
+
   pre[data-theme='light'],
   code[data-theme='light'] {
     display: none;
@@ -131,6 +146,17 @@ code[data-line-numbers-max-digits='3']>[data-line]::before {
 
 @media (prefers-color-scheme: light),
 (prefers-color-scheme: no-preference) {
+
+  [data-highlighted-line] {
+    /* diffEditor.insertedLineBackground */
+    background-color: #40a02b26;
+  }
+
+
+  [data-highlighted-chars] {
+    border-radius: .25rem;
+    background-color: #FADB14;
+  }
 
   pre[data-theme='dark'],
   code[data-theme='dark'] {
