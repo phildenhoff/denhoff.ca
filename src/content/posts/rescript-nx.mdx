@@ -33,6 +33,9 @@ Let's see what using it looks like.
 _Side note_: You can [view the final repo on GitHub](https://github.com/phildenhoff/rescript-and-node-nx).
 
 First, we need to create an empty Nx workspace for us to try all this out in.
+I'm using [pnpm](https://pnpm.io/) here, but you should be able to use yarn, npm, or bun.
+`pnpm dlx` is the same as `yarn create`, `npx` or `bunx`.
+
 I'll call my example workspace `org` — feel free to use something else, but where I write `@org` you'll need to replace it with your workspace name.
 
 (You can skip distributed caching, but for real projects I recommend enabling it.)
@@ -53,7 +56,7 @@ git status
 ## Creating an application and a library package
 
 We'll need to create some library code, which we'll later reconfigure as a Rescript project, as well as an application that can use that code.
-This is the core of Nx — packge & dependency management, with some extra caching.
+This is the core of Nx — package & dependency management, with some extra caching.
 
 A Node.js server will work well as the application, and Nx has a generator we can run to automatically set that up for us.
 Rescript is not yet supported (thus, this article) and so we'll have to hack on top of what we get out of the `@nx/js` generator to get that working.
@@ -66,6 +69,7 @@ Okay, enough preamble, how do we create a nearly-empty JS library that we can ha
 ### Creating a basic library
 
 We'll go with a library name of `finance`. 
+If, while running this command, you are asked "What should be the project name and where should it be generated", pick libs/finance.
 
 ```shell /finance/
 pnpm nx generate @nx/js:library --name=finance \
@@ -75,7 +79,6 @@ pnpm nx generate @nx/js:library --name=finance \
   --directory=libs/finance \
   --importPath=@org/finance
 ```
-(If you are asked "What should be the project name and where should it be generated", pick libs/finance).
 
 With that done (I recommend committing your changes along the way, but I won't remind you at every step), we need to add some more missing stuff.
 
@@ -114,23 +117,22 @@ pnpm nx g @nx/node:application --name=api --framework=express
 
 We need to make some changes to how Nx has set up our Node application — by default, when we build our server it won't automatically build code from monorepo packages it's dependent on, and the generated file won't properly reference our `finance` library.
 
-Our fix for references is **fine only for a prototype**.
-You almost certainly want to come up with a better solution for longterm use.
-Let me know what you come up with!
-
-First, we want to ensure that when we build `api`, Nx builds the projects `api` depends on (or skips those builds, iff the outputs match a previously cached version for the same inputs).
+First, we want to make sure that when we build our Node.js app, Nx goes and builds everything that it depends on first.
 Within `api/project.json`, add `"dependsOn": ["^build"]` to the build target.
 
 Second, we need to make sure that when we build `api` that the build tool (esbuild, by default) can reference the packages our code will import.
 The configuration for how we use esbuild is in the Nx config file `api/project.json` — specifically, within the "build" target.
 If we left `"bundle": false` in our esbuild config, we would end up with a generated file (`dist/api/main.js`) that attempts to `require()` from a package `@org/finance` that cannot be found (Why, I'm not sure. Maybe because we generate a new package.json in our esbuild config?). 
-If we don't generate that `package.json`, the build fails to import `express`.
+If we don't generate the `package.json`, the build fails to import `express`.
 
-So, **we need to ensure that our generated file can reference its imports**.
-One way of doing that is by bundling all of the imports into one giant file.
-Hopefully esbuild is good at trimming dead code...
+So, we need to ensure that our generated file can reference its imports.
+One way of doing that is by **bundling all of the imports into one giant file**, which is what we'll do.
+This is less than ideal — debugging is likely to be more difficult unless you correctly set up source maps.
+What we're doing here is **fine for a prototype**, but a more complex system might have issues.
+If you come up with a better solution, please let me know!
 
-Third, we need to make sure we're set up to use ES Modules, by changing the `format` from `cjs` to `esm`.
+Third, we want to make sure we're set up to use ES Modules, by changing the `format` from `cjs` to `esm`.
+Whether we _need_ to use ES Modules is unclear to me, but I had issues importing Common JS modules which were resolved when I swapped to ESM.
 
 Our `api/project.json` file should end up looking like this:
 
@@ -188,7 +190,7 @@ cat package.json | grep rescript
 
 And then add it to `libs/finance/package.json`.
 **Generally, we should not have to do this.**
-Nx should be able to manage our package.json automatically for us.
+If we had an Nx/ReScript plugin, Nx would manage our package.json dependencies automatically for us by inspecting the source code and seeing which dependencies are used.
 
 ```json {7}
 // libs/finance/package.json
@@ -298,8 +300,8 @@ With Rescript building our code manually, let's look at adding our build as an N
 ## Building ReScript with Nx
 
 We're going to use the "nx:run-commands" executor for our build, which allows to run arbitrary shell commands in our target.
-This isn't the Nx Way™, but that won't stop us from building a prototype that we can improve later.
-With it, we can call `pnpm rescript build` in the finance project, tuning what we cache and when.
+This isn't the Nx Way™ — ideally, we would have a ReScript plugin that controls our build — but that won't stop us from building a prototype that could be improved later.
+With the "nx:run-commands" executor, we can call the command `pnpm rescript build` in the finance project, tuning what we cache and when.
 
 Edit the `libs/finance/project.json` to look like this:
 
@@ -351,8 +353,9 @@ Nx will read the output files out of its cache instead of running the ReScript c
 
 # Using ReScript code in a Node.js app
 
-Now we have ReScript source code, buildable by Nx, that generates TypeScript we can use in our Node.js app.
-Why don't we try to call it?
+So, reviewing what we've done so far: we have ReScript source code that Nx will build for us.
+The build generates TypeScript from ReScript, and our Node.js app can reference that TS.
+Why don't we try it out?
 
 Open your `api/src/main.ts` and import & call `compoundInterest`.
 You can log the value immediately, or put it in an HTTP response — we'll do both.
