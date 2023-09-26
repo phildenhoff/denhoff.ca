@@ -10,7 +10,7 @@
   font-family: "Rasa";
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/fonts/rasa_variable.ttf") format("ttf");
+  src: url("/assets/fonts/rasa_variable.ttf") format("opentype");
   font-display: swap;
 }
 
@@ -75,6 +75,10 @@ pre {
 
 pre code {
   white-space: pre-wrap;
+}
+
+strong {
+  font-variation-settings: 'wght' 800;
 }
 
 /** BEGIN: Line numbers (for rescript) */
