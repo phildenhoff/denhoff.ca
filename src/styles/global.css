@@ -10,7 +10,7 @@
   font-family: "Rasa";
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/fonts/rasa_400.woff") format("woff2");
+  src: url("/assets/fonts/rasa_variable.ttf") format("ttf");
   font-display: swap;
 }
 
