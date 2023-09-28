@@ -26,7 +26,9 @@ const publishDate = new Intl.DateTimeFormat('en-CA').format(frontmatter.pubDate)
 ---
 
 <DefaultLayout content={{title: frontmatter.title}} >
-    <h1>{frontmatter.title}</h1>
-    <p>{publishDate}</p>
-    <slot />
+    <article>
+      <h1>{frontmatter.title}</h1>
+      <p>{publishDate}</p>
+      <slot />
+    </article>
 </DefaultLayout>
