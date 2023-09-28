@@ -1,0 +1,57 @@
+---
+title: Android won't get passkeys from other devices... unless you tell it what to get
+pubDate: 2023-09-27
+description: I just want to sign into my dang app. Why do I have to give you the list of valid credentials?? Let the user pick one!
+author: 'Phil Denhoff'
+image:
+    url: 'https://docs.astro.build/assets/full-logo-light.png'
+    alt: 'The full Astro logo.'
+tags: ["webauthn", "android", "ios", "learning in public"]
+---
+
+I've been playing around with WebAuthn recently, building an app that uses it as the primary login method.
+Building out the backend has been interesting — I'm constantly learning new stuff — but the frontend has been exhausting.
+
+Here's one example. I'll try to keep it short.
+
+In our flow, we want users to sign in by their username & passkey in one step.
+Those passkeys might be stored in the platform authenticator or in a remote authenticator: think Android/iOS vs. iCloud/1Password/Bitwarden/another phone.
+
+On Android, if you make a `navigator.credentials.get` call _without_ providing a list of allowed credentials in the `allowCredentials` option, we will **only get back the platform credentials**.
+If no platform credentials have been set up for the relaying party's id (`rpId`), the user will be told they have none, and given no other info or options.
+Android won't ask the user if they'd like to use a remote authenticator, like their hardware token or a different phone.
+
+```typescript
+// Android users will not be able to use a remote authenticator for this credential request
+await navigator.credentials.get({publicKey: {
+	challenge: ArrayBuffer,
+    timeout: SIXTY_SECONDS,
+    rpId: window.location.hostname,
+    allowCredentials: [],
+    userVerification: preferred
+}});
+```
+
+However, if we _do_ provide a list of allowed credentials, Android will prompt only for **USB, Bluetooth or NFC devices** — I guess it doesn't support scanning QR codes from other phones, or password managers? 
+
+``` ts
+// Android users can use their BT, NFC, or USB authenticators for this.
+// But not other phones.
+await navigator.credentials.get({publicKey: {
+	challenge: ArrayBuffer,
+    timeout: SIXTY_SECONDS,
+    rpId: window.location.hostname,
+    allowCredentials: [{
+      id: RemotelyStoredCredentialId,
+      type: "public-key",
+      transports: []
+    }],
+    userVerification: preferred
+}});
+```
+
+On iOS, either call works — with or without the list of allowed credentials.
+The first will look for valid credentials for the `rpId`, suggest them, **and provide an alternative option to use a remote authenticator**.
+The second call, with the list of allowed credentials, will filter out anything local not in that list and, finding that there are no local credentials, suggest using a remote authenticator.
+
+Why is Android like this? I don't know.
