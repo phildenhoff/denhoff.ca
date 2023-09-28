@@ -5,12 +5,14 @@ import BaseLayout from "../layouts/default.astro";
 const pageTitle = "things I wrote";
 const allPosts = await getCollection("posts");
 
+const sortedPosts = [...allPosts].sort((a, b) => b.data.pubDate - a.data.pubDate);
+
 ---
 
 <BaseLayout content={{title: pageTitle}}>
   <table style="border-collapse: collapse;">
     {
-      allPosts.map((post) => (
+      sortedPosts.map((post) => (
         <tr style="border-bottom: 2rem solid transparent">
           <td style="width: 12ch;">
                 <time datetime={post.data.pubDate.toISOString()} pubdate>
