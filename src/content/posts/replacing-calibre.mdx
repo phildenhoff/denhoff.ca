@@ -1,0 +1,76 @@
+---
+title: Replacing Calibre
+pubDate: 2024-01-13
+description: Calibre is a powerful tool. It's time to build a better Calibre.
+author: 'Phil Denhoff'
+image:
+    url: 'https://docs.astro.build/assets/full-logo-light.png'
+    alt: 'The full Astro logo.'
+tags: ["calibre", "rust", "svelte", "tauri", "learning in public"]
+---
+
+Calibre is an excellent tool — if you believe that a swiss army knife with 95 attachments is an excellent tool.
+
+<figure>
+    <img
+        src="/assets/posts/replacing-calibre/calibre-pocket-knife.png"
+        alt="A pocket knife with way too many goddamn tools. It's useless!"
+    />
+    <figcaption>
+    Calibre, pretty much.
+    </figcaption>
+</figure>
+
+However, if you enjoy being able to reach into your bag, grab your pocket knife and immediately know how to use it, Calibre is the worst tool you could use.
+That's why I've been writing a backwards compatible replacement for Calibre.
+It's called [Citadel](https://github.com/every-day-things/citadel), and here's a short demo video.
+
+<video controls style="max-width: 80ch; width: 100%" poster="/assets/posts/replacing-calibre/video-poster.png">
+ <source type="video/mp4" src="https://github.com/every-day-things/citadel/assets/17505728/84a0c9dd-f14e-411a-8947-1d599f3ad85a" />
+</video>
+
+In case you didn't notice, it's quite rough!
+
+# Citadel, a prototype replacement for Calibre
+
+Citadel is a Tauri desktop app that reads & writes Calibre libraries (SQLite database + existing book files) and helps you manage them.
+It has a Svelte frontend (that can be run over the internet) and a Rust backend (which supports headless HTTP server mode).
+Most of the work to read & write Calibre data is in a separate crate called `libcalibre`, which I hope to separately publish in the future so that others can create robust Calibre tools.
+
+So far, you can:
+
+- List all of your books as a cover view or table view
+- Add a new book
+- Edit the title of a book
+- Copy a book to a folder on your computer, e.g. a SD card that's attached to your computer (for ereaders)
+
+As you can tell, this is _incredibly_ early software with little functionality and a propensity to crash if you look at it wrong (I have a few too many panic-y `.unwrap()`s).
+
+It's early days for the project! Calibre has been around for 15 years and has ~450k lines of Python.
+Citadel has maybe ~3k lines of Rust, and maybe another 1k lines of Svelte/Typescript.
+
+But it's a prototype, and it's working today, and I'm slowly replacing my Calibre usage with an app I wrote myself that doesn't take 8s to boot on an M2 Max Macbook Pro.
+
+[Citadel is open-source and on GitHub](https://github.com/every-day-things/citadel). There are no release builds yet and it's only been tested on my M2 Macbook.
+It _should_ work elsewhere, but if you run into issues please let me know!
+
+
+# Addendum
+
+### Why Svelte + Rust?
+
+I picked Rust for the backend because I wanted to learn it. This is a hobby project! I'm allowed to do whatever I want.
+
+For the frontend, I wanted to use something that isn't React, having been using it at work for 2+ years.
+I know Vue & Svelte pretty well, and I wanted another project to use Svelte in (besides my [Logseq/Raindrop](https://github.com/phildenhoff/logseq-raindrop) plugin and my [Logseq slipbox](https://github.com/phildenhoff/logseq-slipbox) plugin), so that's why it's a Svelte frontend.
+It's specifically web-tech because I already know how to write web frontends. I tried Swift before! But it took too long to make progress.
+
+With a native backend, a fast-to-write-and-maintain frontend, the use of native webviews (the binary for macOS is 18MB), and the option of splitting the frontend & backend up to connect them over HTTP, going down this route has been a great choice so far.
+
+# A note on `libcalibre`
+
+I've separated all of the logic of "how to talk to a Calibre library" into a crate called `libcalibre`.
+It's (experimentally) written applying DDD, but I'm not sure how well I like that.
+
+The crate itself is pretty flexible — you should be able to use it in a CLI tool, or compile it for another language and make a _true_ native e-book library management app.
+[I started doing that before, in Swift](https://github.com/phildenhoff/native-macos-digital-library), before realising that I was working to learn both Swift as well as all of Calibre's business logic, which made progress infuriatingly slow.
