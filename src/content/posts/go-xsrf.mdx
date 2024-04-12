@@ -1,0 +1,33 @@
+---
+title: golink xsrf error
+pubDate: 2024-04-11
+description: Tailscale's golinks is excellent. XSRF errors are not.
+author: "Phil Denhoff"
+tags: ["tailscale", "xsrf", "golink"]
+---
+
+A recent update of Tailscale's excellent [golink](https://github.com/tailscale/golink) tool broke creating links for me.
+
+Every time I tried to create a new link, I got an error: "invalid xsrf token".
+
+I tried restarting my browser, going straight to https://go/ instead of the
+usual https://go.my-tailnet.ts.com, opening golink in a different browser
+(Safari, instead of Arc), but all to no avail.
+
+So, I rolled back my Docker container to the previous release (see below).
+Rolling back, suddenly the app worked again. Great! That makes sense, since the
+most recent release includes changes to how XSRF/CSRF is handled when adding
+new links.
+
+However, I rolled forward again, to the latest image. And the app works again
+normally. I don't know why. If you run into the same issue as I did with
+golinks, maybe you need to restart the service? Or roll back & roll forward?
+
+I hope that helps!
+
+---
+
+The version I rolled back to:
+
+[ghcr.io/tailscale/golink@sha256:09c8f79a4b7f908337888e0cb4e2c24ec6bbeadb22b9385fefd9f6ed29f5adfe](https://github.com/tailscale/golink/pkgs/container/golink/191714519),
+which corresponds to [this commit](https://github.com/tailscale/golink/commit/6c79b503e19a500c551ce162b0a1b32abebd9a94).
