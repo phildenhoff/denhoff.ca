@@ -1,0 +1,45 @@
+---
+title: The Value of Legacy Software
+pubDate: 2024-04-19
+description: '"Legacy" code is, unfortunately, valuable'
+author: "Phil Denhoff"
+tags: ["maintenance", "legacy code"]
+---
+
+I've recently been working on a piece of software, about 10 years old, that is a Shopify app.
+
+It was acquired from an individual who had evidently built it haphazardly and, when bought, the app was heavily invested into.
+Much was done to bring the UI up to snuff with Shopify's expectations for good software.
+Flow (the now-defunct competitor to Typescript) was added. Storybook and other niceties as well.
+
+However, behind all of the UI cleanup, the addition of types in some spots, and a few new features lurks a ball of mud.
+A ball of mud essentially written by one man, and now maintained by a small team.
+We add the occassional feature here, and we might fix a bug there, but most of our work on the **existing** code is reactionary: we _must_ make this change.
+Shopify is deprecating an API and now _we must_ rewrite the existing API client to use the new API.
+We are adding new functionality here to sell our product to new markets so _we must_ change this 8-year-old, 800 line function.  
+
+What we are **not** doing is _opportunistically_ improving our legacy code.
+When adding another layer on top of existing code, we haven't asked ourselves how we can improve what is already there.
+Can we get the method under test?
+Can we split up the method to get some major fraction of it under test?
+We simply bolt code onto the outside, try to futz as little as possible with the inside bits, and move on.
+
+I don't think this is healthy for a team, and more importantly, not healthy for a business.
+When you continue to bolt things onto the outside, you live in a _shanty town_. You build a ball of mud.
+Every architecture decision is you, your team, and the existing code that you cannot refactor if you wanted to.
+The code ends up making more architectural decisions than you do.
+And, because you cannot control the code, you cannot add the features that you want to.
+You cannot achieve the timelines that you want to.
+
+So why have a ball of mud? Because it's profitable.
+Today, that is the hardest pill for me to swallow, but it's what I'm learning to accept about businesses.
+It's simply not necessary to clean up our work; we can continue making money without changing the ball of mud.
+Even better, not changing the code minimizes the short-term risk that our changes might break something.
+Heaven forbid our profitable, unassuming product should run into issues.
+
+What that calculus fails to include is the outsized risk of being prevented from making changes, or slowed down when you can.
+If a product is in maintenance mode, not touching legacy code is fine.
+It continues to make money, the occasional bug is squashed, and required changes are made.
+But when you want to extend a product, in functionality or in market share, you need to be willing to dry out some mud.
+
+❦
