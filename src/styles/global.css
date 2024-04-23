@@ -77,6 +77,10 @@ pre code {
   white-space: pre-wrap;
 }
 
+code {
+  font-size: 0.8rem;
+}
+
 strong {
   font-variation-settings: 'wght' 600;
 }
