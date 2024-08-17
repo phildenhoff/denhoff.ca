@@ -1,0 +1,33 @@
+---
+title: On Prototyping
+pubDate: 2024-08-16
+description: 'Write throw away prototypes to learn new things.'
+author: "Phil Denhoff"
+tags: ["learning", "programming"]
+---
+
+Over the last month or so, I've had two opportunities at my job to build prototypes of existing _things_ that I have extensive experience with.
+Both prototypes have been extremely helpful in teaching me how the existing systems work.
+Without building the thing haphazardly and hackily, I wouldn't understand first-hand the tradeoffs that were made for our existing _things_. 
+
+One prototype gave me the opportunity to learn about the kind of HTTP server Middleware that you only write when first setting up and API.
+Not a common thing, by any means.
+It taught me about a new HTTP server library, and how to delicately balance storing information in the context of that request in a way that was actually usable downstream.
+
+The other project taught me about the complexities of orchestrating background job processing, similar to Elixir's Oban.
+I learned about Web Workers and their limitations (each is on its own thread, so there's no shared objects; messages passed between Workers must be contain only primitives, no objects or functions).
+I practiced writing code that doesn't crash when things go wrong — crashing in a Web Worker crashes the Bun runtime, which means your server shutdown because a worker failed.
+That's almost the antithesis to the Elixir/BEAM runtime — Erlang virtual processess can crash all the time but the OS _runtime_ process will never crash.
+
+When would I need to learn the ins and outs of background job processing?
+How often does one set up a new HTTP API and need to set it up from scratch?
+These things don't come up unless you give them the opportunity.
+
+Create prototypes.
+Write crappy, throw away code.
+What if, one day, you want to write a production-ready version?
+Now you've learned the basics, now you can do it.
+You've already made mistakes you can learn from.
+
+You just have to go out and build it.
+
