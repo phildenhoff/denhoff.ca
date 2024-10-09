@@ -1,7 +1,9 @@
 {
+  "$schema": "https://github.com/SchemaStore/schemastore/raw/refs/heads/master/src/schemas/json/package.json",
   "name": "@example/starter",
   "version": "0.0.1",
   "private": true,
+  "packageManager": "bun@1.1.12",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
