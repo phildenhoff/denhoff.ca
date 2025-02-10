@@ -213,6 +213,10 @@ ul {
   margin: 1rem 0;
 }
 
+ol {
+  margin: 1rem 0;
+}
+
 ul>li {
   margin-bottom: 0.3rem;
 }

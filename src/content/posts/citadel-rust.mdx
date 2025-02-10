@@ -1,0 +1,71 @@
+---
+title: Using Rust wasn't a mistake
+pubDate: 2025-02-10
+description: But it was a painful experience.
+author: "Phil Denhoff"
+tags: ["citadel", "rust"]
+---
+
+It was a painful experience.
+
+I originally created [Citadel](https://github.com/every-day-things/citadel) as a [Tauri](https://tauri.app/) app, using Svelte for the frontend and Rust in the backend.
+At the start, this worked pretty well — I enjoyed learning about Rust and how it worked, managing references, and writing "performant" software.
+
+At some point, I looked into running the Rust backend as a separate, stand-alone REST API so that you could self host a web version of Citadel.
+While feasible, it seemed painful.
+Working with Tokio is annoying for someone whose day job involves writing highly concurrent Elixir and a lot of async Typescript.
+Why do I have to manage lifecycles? Why am I giving myself this pain?
+After hours of trying to get async requests working across the app, I gave up.
+So I shelved the HTTP API and continued working away on Citadel as a desktop app.
+
+Adding features was slow, steady progress. But it often worked in two phases:
+
+1. Very quick progress in the UI (using tools I am very familiar with)
+1. Very, _very_ slow progress in the small, complicated backend
+
+
+Every time I wanted to retrieve more data from the existing database schema
+(Citadel uses an existing schema, derived from Calibre), I had to remember how
+Rust and the libraries I'm using work.
+Then, I had to figure out what business rules Calibre expects / follows and then
+mesh the two to get data out — and the process is even slower when trying to
+insert new data.
+All the inherit complexity got lost in the incidental complexity of using Rust.
+ 
+About a month ago, I came back to Citadel with the plan to start supporting downloading metadata from sources like [Hardcover](https://hardcover.app).
+Calibre supports this (using other providers), Calibre-Web supports this, Citadel needs to.
+I first tried to make a super-simple prototype in the frontend, but Hardcover blocks requests from localhost, so I had to push it to the backend.
+
+After three hours of trying to get Rust to make a web request in a reasonable, understandable way, I gave up.
+I doubt Rust is to blame here, but I could not figure out how to use an async runtime like Tokio when making IPC requests via Tauri.
+The lifetimes got all messed up.
+I couldn't find a sync HTTP library, either. I don't need async HTTP requests! I don't really care! But the ecosystem has moved to async, and bring your own runtime.
+
+In comparison, the same graphql request in Typescript is trivially easy.
+I mean, of course it is.
+There are tradeoffs to that simplicity.
+
+But after looking at the options for Citadel, I've landed on migrating the app to Electron.
+ugh, I know.
+_Electron_.
+Bane of users everywhere, with its non-native UI patterns and 300MB executables.
+It's gross! Frankly, I hate it!
+I started Citadel originally as a Swift app exactly to avoid this problem.
+I wanted fast, native software.
+But the pain of not being able to make quick progress because I was learning new
+tooling outran the joy of learning new tools eventually, and now I'd trade
+anything to be able to release the features I wanted to add to Citadel _over a
+year ago_ but couldn't, because I wasn't comfortable with my tools.
+
+I'm in do-or-die mode with Citadel.
+If I can't start making progress and adding features that I want, I'll probably
+stop using it.
+At that point, who cares if it's built with Electron or Neutralino or Tauri or
+Wails or if its native software?
+This is a hobby project, which I wrote _for me_.
+I probably have over a gigabyte of intermediate build artifacts for the Rust build.
+At this point, trading to an Electron build might _save me disk space_.
+
+So, while I enjoyed the satisfaction and challenge of writing Rust code,
+I'm dropping the language from Citadel for now.
+Maybe a new project will come up where Rust feels like the right choice?
